@@ -56,7 +56,7 @@ export const en: Dictionary = {
     contactMe: "Contact Me",
     productThinking: "PRODUCT THINKING",
     productText:
-      "I build production-ready, scalable web applications. I ship with C#, .NET, TypeScript, and React, focusing on clean architecture and secure coding.",
+      "I build production-ready, scalable software products. I ship with C#, .NET, TypeScript, and React, focusing on clean architecture and secure coding.",
     focus: "Focus",
     focusValue: "Scalable products",
     strength: "Strength",
@@ -107,9 +107,9 @@ export const en: Dictionary = {
   },
   experience: {
     eyebrow: "EXPERIENCE",
-    title: "Enterprise roles with real-world impact.",
+    title: "Enterprise roles.",
     description:
-      "Production experience in hospitality and tourism, building reliable software with clean architecture and secure coding practices.",
+      "Hands-on experience in enterprise teams, building reliable software with clean architecture and secure coding practices.",
     items: [
       {
         company: "ATG Hospitality",
@@ -119,10 +119,10 @@ export const en: Dictionary = {
         start: "May 2025",
         end: "Present",
         bullets: [
-          "Developing and maintaining enterprise web applications in a hospitality and tourism environment",
-          "Collaborating with cross-functional teams on business-driven software solutions",
-          "Applying clean architecture and secure coding practices in production workflows",
-          "Supporting digital systems used across international operations",
+          "Developing, maintaining, and enhancing enterprise ERP applications (backend: C#, .NET, ASP.NET Core, EF Core; frontend: React, JavaScript, HTML, CSS, Bootstrap)",
+          "Developing and improving RESTful APIs, and supporting frontend-backend integration",
+          "Building local development environments with Docker, PostgreSQL, and Microsoft SQL Server; contributing to data modeling and query optimization",
+          "Delivering features and fixes across reservation, accounting, and operations modules for live ERP systems serving 1,000+ active users",
         ],
       },
       {
@@ -210,14 +210,14 @@ export const en: Dictionary = {
         slug: "enterprise-operations-platform",
         title: "Enterprise Operations Platform",
         description:
-          "An operations platform designed for maintainable, modular enterprise workflows and long-term iteration.",
-        stack: ["C#", ".NET", "SQL", "Clean Architecture"],
+          "An enterprise operations management platform built with ASP.NET Core Web API and React (Next.js, TypeScript), designed for modular workflows and long-term iteration.",
+        stack: ["ASP.NET Core", "React", "Next.js", "TypeScript", "PostgreSQL"],
         github: "https://github.com/EmirKoroglu3/enterprise-operations-platform",
         highlights: [
-          "Modular structure with clear boundaries",
-          "Production-friendly validation and error handling",
-          "Architecture that scales with new features",
-          "Readable, well-documented codebase",
+          "Multi-module system: meetings, tasks, decisions, workflow automation, documents, notifications, analytics",
+          "Clean Architecture + CQRS with MediatR and FluentValidation",
+          "Secure auth with JWT, RBAC, and multi-tenant approach",
+          "Scalable infra and realtime: PostgreSQL, Redis, SignalR, Hangfire, Docker",
         ],
       },
     ],

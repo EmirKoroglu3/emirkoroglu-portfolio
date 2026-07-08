@@ -107,9 +107,9 @@ export const ru: Dictionary = {
   },
   experience: {
     eyebrow: "ОПЫТ",
-    title: "Корпоративные роли с реальным практическим опытом.",
+    title: "Корпоративные роли.",
     description:
-      "Production-опыт в гостеприимстве и туризме, надёжное ПО с clean architecture и secure coding.",
+      "Hands-on опыт в корпоративных командах: надёжное ПО с clean architecture и secure coding.",
     items: [
       {
         company: "ATG Hospitality",
@@ -119,10 +119,10 @@ export const ru: Dictionary = {
         start: "Май 2025",
         end: "Настоящее время",
         bullets: [
-          "Разработка и поддержка корпоративных веб-приложений в гостеприимстве и туризме",
-          "Сотрудничество с кросс-функциональными командами над бизнес-решениями",
-          "Применение чистой архитектуры и безопасного кодирования в production",
-          "Поддержка цифровых систем в международных операциях",
+          "Разработка, поддержка и улучшение ERP‑приложений (backend: C#, .NET, ASP.NET Core, EF Core; frontend: React, JavaScript, HTML, CSS, Bootstrap)",
+          "Разработка и улучшение RESTful API, поддержка интеграции frontend-backend",
+          "Настройка локальной разработки с Docker, PostgreSQL и Microsoft SQL Server; вклад в моделирование данных и оптимизацию запросов",
+          "Фичи и багфиксы в модулях бронирования, бухгалтерии и операций для live ERP с 1,000+ активных пользователей",
         ],
       },
       {
@@ -210,14 +210,14 @@ export const ru: Dictionary = {
         slug: "enterprise-operations-platform",
         title: "Enterprise Operations Platform",
         description:
-          "Платформа для поддерживаемых и модульных enterprise‑процессов с упором на долгосрочное развитие.",
-        stack: ["C#", ".NET", "SQL", "Clean Architecture"],
+          "Платформа управления корпоративными операциями на ASP.NET Core Web API и React (Next.js, TypeScript), рассчитанная на модульные процессы и долгосрочное развитие.",
+        stack: ["ASP.NET Core", "React", "Next.js", "TypeScript", "PostgreSQL"],
         github: "https://github.com/EmirKoroglu3/enterprise-operations-platform",
         highlights: [
-          "Модульная структура и чёткие границы ответственности",
-          "Валидация и обработка ошибок для production‑сценариев",
-          "Архитектура, которая масштабируется с новыми фичами",
-          "Читаемый и документированный код",
+          "Модули: встречи, задачи, решения, автоматизация workflow, документы, уведомления, аналитика",
+          "Clean Architecture + CQRS с MediatR и FluentValidation",
+          "Безопасная авторизация: JWT, RBAC и multi-tenant подход",
+          "Инфраструктура и realtime: PostgreSQL, Redis, SignalR, Hangfire, Docker",
         ],
       },
     ],

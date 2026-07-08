@@ -57,7 +57,7 @@ export const tr: Dictionary = {
     contactMe: "İletişime Geç",
     productThinking: "ÜRÜN ODAKLI YAKLAŞIM",
     productText:
-      "Üretim odaklı, ölçeklenebilir web uygulamaları geliştiriyorum. C#, .NET, TypeScript ve React ile temiz mimari ve güvenli kodlamaya odaklanıyorum.",
+      "Üretim odaklı, ölçeklenebilir yazılım ürünleri geliştiriyorum. C#, .NET, TypeScript ve React ile temiz mimari ve güvenli kodlamaya odaklanıyorum.",
     focus: "Odak",
     focusValue: "Ölçeklenebilir ürünler",
     strength: "Güçlü yön",
@@ -108,9 +108,9 @@ export const tr: Dictionary = {
   },
   experience: {
     eyebrow: "DENEYİM",
-    title: "Gerçek dünyada kurumsal roller.",
+    title: "Kurumsal roller.",
     description:
-      "Otelcilik ve turizm sektöründe üretim deneyimi, temiz mimari ve güvenli kodlama ile güvenilir yazılım geliştirme.",
+      "Kurumsal ekiplerde üretim deneyimi; temiz mimari ve güvenli kodlama ile güvenilir yazılım geliştirme.",
     items: [
       {
         company: "ATG Hospitality",
@@ -120,10 +120,10 @@ export const tr: Dictionary = {
         start: "Mayıs 2025",
         end: "Devam ediyor",
         bullets: [
-          "Otelcilik ve turizm ortamında kurumsal web uygulamaları geliştirme ve bakım",
-          "İş odaklı yazılım çözümlerinde çapraz fonksiyonlu ekiplerle iş birliği",
-          "Üretim süreçlerinde temiz mimari ve güvenli kodlama uygulamaları",
-          "Uluslararası operasyonlarda kullanılan dijital sistemlere destek",
+          "Kurumsal ERP uygulamalarının Backend (C#, .NET, ASP.NET Core, Entity Framework Core) ve frontend (React, JavaScript, HTML, CSS, Bootstrap) geliştirme, bakım ve iyileştirme süreçlerinde görev aldı",
+          "REST API'lerin geliştirilmesi, mevcut servislerin iyileştirilmesi ve frontend ile backend entegrasyon süreçlerinde görev aldı",
+          "Docker konteynerleri üzerinde PostgreSQL ve Microsoft SQL Server kullanarak yerel geliştirme ortamları oluşturdu; veri modelleme ve sorgu optimizasyonu çalışmalarına katkı sağladı",
+          "Rezervasyon, muhasebe ve operasyon modüllerinde yeni özellik geliştirme, mevcut fonksiyonların iyileştirilmesi ve hata giderme; 1000+ aktif kullanıcıya sahip canlı ERP sistemlerinde bakım süreçlerine katkı sağladı",
         ],
       },
       {
@@ -211,14 +211,14 @@ export const tr: Dictionary = {
         slug: "enterprise-operations-platform",
         title: "Enterprise Operations Platform",
         description:
-          "Kurumsal süreçleri destekleyen, modüler ve sürdürülebilir bir operasyon yönetim platformu.",
-        stack: ["C#", ".NET", "SQL", "Clean Architecture"],
+          "ASP.NET Core Web API ve React (Next.js, TypeScript) ile geliştirilen kurumsal operasyon yönetim platformu; modüler iş akışları ve uzun vadeli geliştirme için tasarlandı.",
+        stack: ["ASP.NET Core", "React", "Next.js", "TypeScript", "PostgreSQL"],
         github: "https://github.com/EmirKoroglu3/enterprise-operations-platform",
         highlights: [
-          "Modüler yapı ve net sorumluluk sınırları",
-          "Üretim senaryolarına uygun hata yönetimi ve doğrulama",
-          "Bakımı kolay, genişlemeye açık mimari yaklaşım",
-          "Dokümantasyon ve okunabilirlik odağı",
+          "Toplantı, görev, karar, iş akışı otomasyonu, doküman, bildirim ve analitik modüllerinden oluşan çok modüllü yapı",
+          "Clean Architecture + CQRS; MediatR ve FluentValidation ile ölçeklenebilir mimari",
+          "JWT Authentication, RBAC ve multi-tenant yaklaşımı ile güvenli yetkilendirme",
+          "PostgreSQL, Redis, SignalR, Hangfire ve Docker ile ölçeklenebilir altyapı",
         ],
       },
     ],

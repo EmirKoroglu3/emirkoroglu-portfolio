@@ -56,7 +56,7 @@ export const de: Dictionary = {
     contactMe: "Kontakt aufnehmen",
     productThinking: "PRODUKTDENKEN",
     productText:
-      "Ich entwickle produktionsreife, skalierbare Webanwendungen. Ich arbeite mit C#, .NET, TypeScript und React, mit Fokus auf Clean Architecture und sichere Programmierung.",
+      "Ich entwickle produktionsreife, skalierbare Software-Produkte. Ich arbeite mit C#, .NET, TypeScript und React, mit Fokus auf Clean Architecture und sichere Programmierung.",
     focus: "Fokus",
     focusValue: "Skalierbare Produkte",
     strength: "Stärke",
@@ -107,9 +107,9 @@ export const de: Dictionary = {
   },
   experience: {
     eyebrow: "ERFAHRUNG",
-    title: "Enterprise-Rollen mit echtem Praxisbezug.",
+    title: "Enterprise-Rollen.",
     description:
-      "Produktionserfahrung in Hotellerie und Tourismus, zuverlässige Software mit Clean Architecture und Secure Coding.",
+      "Hands-on Erfahrung in Enterprise-Teams, zuverlässige Software mit Clean Architecture und Secure Coding.",
     items: [
       {
         company: "ATG Hospitality",
@@ -119,10 +119,10 @@ export const de: Dictionary = {
         start: "Mai 2025",
         end: "Aktuell",
         bullets: [
-          "Entwicklung und Wartung von Enterprise-Webanwendungen in Hotellerie und Tourismus",
-          "Zusammenarbeit mit funktionsübergreifenden Teams an geschäftsorientierten Lösungen",
-          "Anwendung von Clean Architecture und sicherer Programmierung in Produktionsprozessen",
-          "Unterstützung digitaler Systeme in internationalen Operationen",
+          "Entwicklung, Wartung und Weiterentwicklung von Enterprise-ERP-Anwendungen (Backend: C#, .NET, ASP.NET Core, EF Core; Frontend: React, JavaScript, HTML, CSS, Bootstrap)",
+          "Entwicklung und Verbesserung von RESTful APIs sowie Unterstützung der Frontend-Backend-Integration",
+          "Aufbau lokaler Entwicklungsumgebungen mit Docker, PostgreSQL und Microsoft SQL Server; Beitrag zu Datenmodellierung und Query-Optimierung",
+          "Feature-Entwicklung und Bugfixes in Reservierung-, Buchhaltung- und Operations-Modulen für Live-ERP-Systeme mit 1.000+ aktiven Nutzern",
         ],
       },
       {
@@ -210,14 +210,14 @@ export const de: Dictionary = {
         slug: "enterprise-operations-platform",
         title: "Enterprise Operations Platform",
         description:
-          "Eine Operations-Plattform für wartbare, modulare Enterprise-Workflows und langfristige Weiterentwicklung.",
-        stack: ["C#", ".NET", "SQL", "Clean Architecture"],
+          "Eine Enterprise-Operations-Management-Plattform mit ASP.NET Core Web API und React (Next.js, TypeScript), gebaut für modulare Workflows und langfristige Weiterentwicklung.",
+        stack: ["ASP.NET Core", "React", "Next.js", "TypeScript", "PostgreSQL"],
         github: "https://github.com/EmirKoroglu3/enterprise-operations-platform",
         highlights: [
-          "Modulare Struktur mit klaren Grenzen",
-          "Validierung und Fehlerhandling für Production-Workflows",
-          "Architektur, die mit neuen Features skaliert",
-          "Lesbarer, gut dokumentierter Code",
+          "Multi-Modul-System: Meetings, Aufgaben, Entscheidungen, Workflow-Automation, Dokumente, Benachrichtigungen, Analytics",
+          "Clean Architecture + CQRS mit MediatR und FluentValidation",
+          "Sichere Auth: JWT, RBAC und Multi-Tenant-Ansatz",
+          "Skalierbare Infrastruktur & Realtime: PostgreSQL, Redis, SignalR, Hangfire, Docker",
         ],
       },
     ],
