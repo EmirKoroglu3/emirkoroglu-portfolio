@@ -16,21 +16,14 @@ export default async function Icon() {
           width: "100%",
           height: "100%",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "transparent",
+          backgroundImage: `url(${iconSrc})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           borderRadius: 9999,
           overflow: "hidden",
         }}
-      >
-        <img
-          src={iconSrc}
-          alt=""
-          width={32}
-          height={32}
-          style={{ objectFit: "cover", objectPosition: "top" }}
-        />
-      </div>
+      />
     ),
     { ...size },
   );
