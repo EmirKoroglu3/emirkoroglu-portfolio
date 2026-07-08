@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { AppProviders } from "@/components/providers/AppProviders";
 import { getDictionary } from "@/lib/i18n";
 import { getServerLocale } from "@/lib/i18n/server";
@@ -53,6 +54,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body className="bg-bg text-text antialiased">
         <AppProviders initialLocale={locale}>{children}</AppProviders>
+        <GoogleAnalytics />
         <Analytics />
       </body>
     </html>

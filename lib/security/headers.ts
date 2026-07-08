@@ -1,13 +1,15 @@
 export function buildSecurityHeaders(isProd: boolean): Record<string, string> {
-  const scriptSrc = isProd ? "script-src 'self' 'unsafe-inline'" : "script-src 'self' 'unsafe-inline' 'unsafe-eval'";
+  const scriptSrc = isProd
+    ? "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com"
+    : "script-src 'self' 'unsafe-inline' 'unsafe-eval'";
 
   const csp = [
     "default-src 'self'",
     scriptSrc,
     "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: blob:",
+    "img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com",
     "font-src 'self'",
-    "connect-src 'self'",
+    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com https://www.googletagmanager.com",
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",
