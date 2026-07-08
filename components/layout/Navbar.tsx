@@ -82,7 +82,7 @@ export function Navbar() {
               </div>
             </a>
 
-            <div className="hidden min-w-0 flex-1 flex-nowrap items-center justify-center gap-0.5 overflow-x-auto lg:flex [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="hidden min-w-0 flex-1 flex-nowrap items-center justify-start gap-0.5 overflow-x-auto px-1 lg:flex [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               {navIds
                 .filter((id) => id !== "contact")
                 .map((id) => (

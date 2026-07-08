@@ -57,7 +57,7 @@ export const tr: Dictionary = {
     contactMe: "İletişime Geç",
     productThinking: "ÜRÜN ODAKLI YAKLAŞIM",
     productText:
-      "Otelcilik ve turizm sektöründe kurumsal yazılım geliştirme. C#, .NET, TypeScript ve React ile temiz mimari ve güvenli kodlamaya odaklanıyorum.",
+      "Üretim odaklı, ölçeklenebilir web uygulamaları geliştiriyorum. C#, .NET, TypeScript ve React ile temiz mimari ve güvenli kodlamaya odaklanıyorum.",
     focus: "Odak",
     focusValue: "Ölçeklenebilir ürünler",
     strength: "Güçlü yön",
@@ -71,7 +71,7 @@ export const tr: Dictionary = {
     eyebrow: "HAKKIMDA",
     title: "Kurumsal deneyim. Ürün kalitesinde uygulama.",
     description:
-      "ATG Hospitality'de Junior Yazılım Geliştirici, otelcilik sektörü deneyimini modern full stack geliştirme ile birleştiriyorum.",
+      "ATG Hospitality'de Junior Yazılım Geliştirici olarak modern full stack geliştirme ile ürün odaklı uygulamalar geliştiriyorum.",
     positioning: "KONUMLANDIRMA",
     positioningText:
       "Akdeniz Üniversitesi mezunu (Yönetim Bilişim Sistemleri, 2025). Temiz mimari, güvenli kodlama ve gerçek iş problemlerini çözen yazılımlar geliştirmeye önem veriyorum.",
@@ -205,6 +205,20 @@ export const tr: Dictionary = {
           "Yükleme ve hata durumlarıyla GitHub API entegrasyonu",
           "Mobil, tablet ve masaüstünde tam duyarlılık",
           "SEO, erişilebilirlik ve performans optimizasyonları",
+        ],
+      },
+      {
+        slug: "enterprise-operations-platform",
+        title: "Enterprise Operations Platform",
+        description:
+          "Kurumsal süreçleri destekleyen, modüler ve sürdürülebilir bir operasyon yönetim platformu.",
+        stack: ["C#", ".NET", "SQL", "Clean Architecture"],
+        github: "https://github.com/EmirKoroglu3/enterprise-operations-platform",
+        highlights: [
+          "Modüler yapı ve net sorumluluk sınırları",
+          "Üretim senaryolarına uygun hata yönetimi ve doğrulama",
+          "Bakımı kolay, genişlemeye açık mimari yaklaşım",
+          "Dokümantasyon ve okunabilirlik odağı",
         ],
       },
     ],

@@ -56,7 +56,7 @@ export const ru: Dictionary = {
     contactMe: "Связаться",
     productThinking: "ПРОДУКТОВОЕ МЫШЛЕНИЕ",
     productText:
-      "Корпоративная разработка ПО в сфере гостеприимства и туризма. Работаю с C#, .NET, TypeScript и React, с акцентом на чистую архитектуру и безопасный код.",
+      "Делаю production-ready и масштабируемые веб‑приложения. Работаю с C#, .NET, TypeScript и React, с акцентом на чистую архитектуру и безопасный код.",
     focus: "Фокус",
     focusValue: "Масштабируемые продукты",
     strength: "Сильная сторона",
@@ -70,7 +70,7 @@ export const ru: Dictionary = {
     eyebrow: "ОБО МНЕ",
     title: "Корпоративный опыт. Реализация уровня продукта.",
     description:
-      "Junior Software Developer в ATG Hospitality и Anex Tour, сочетаю отраслевой опыт в гостеприимстве с современной full stack разработкой.",
+      "Junior Software Developer в ATG Hospitality, фокус на современной full stack разработке и чистой архитектуре.",
     positioning: "ПОЗИЦИОНИРОВАНИЕ",
     positioningText:
       "Выпускник Университета Акдениз (Информационные системы в управлении, 2025). Для меня важны чистая архитектура, безопасный код и ПО, решающее реальные бизнес-задачи.",
@@ -204,6 +204,20 @@ export const ru: Dictionary = {
           "Интеграция GitHub API с состояниями загрузки и ошибок",
           "Полная адаптивность на мобильных, планшетах и десктопе",
           "SEO, доступность и оптимизация производительности",
+        ],
+      },
+      {
+        slug: "enterprise-operations-platform",
+        title: "Enterprise Operations Platform",
+        description:
+          "Платформа для поддерживаемых и модульных enterprise‑процессов с упором на долгосрочное развитие.",
+        stack: ["C#", ".NET", "SQL", "Clean Architecture"],
+        github: "https://github.com/EmirKoroglu3/enterprise-operations-platform",
+        highlights: [
+          "Модульная структура и чёткие границы ответственности",
+          "Валидация и обработка ошибок для production‑сценариев",
+          "Архитектура, которая масштабируется с новыми фичами",
+          "Читаемый и документированный код",
         ],
       },
     ],

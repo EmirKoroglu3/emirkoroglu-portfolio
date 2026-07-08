@@ -56,7 +56,7 @@ export const en: Dictionary = {
     contactMe: "Contact Me",
     productThinking: "PRODUCT THINKING",
     productText:
-      "Enterprise software development in hospitality and tourism. I build with C#, .NET, TypeScript, and React, focusing on clean architecture and secure coding.",
+      "I build production-ready, scalable web applications. I ship with C#, .NET, TypeScript, and React, focusing on clean architecture and secure coding.",
     focus: "Focus",
     focusValue: "Scalable products",
     strength: "Strength",
@@ -70,7 +70,7 @@ export const en: Dictionary = {
     eyebrow: "ABOUT",
     title: "Enterprise experience. Product-quality execution.",
     description:
-      "Junior Software Developer at ATG Hospitality , combining hospitality industry experience with modern full stack development.",
+      "Junior Software Developer at ATG Hospitality, building modern full stack products with an engineering-first mindset.",
     positioning: "POSITIONING",
     positioningText:
       "Akdeniz University graduate (Management Information Systems, 2025). I care about clean architecture, secure coding, and building software that solves real business problems.",
@@ -204,6 +204,20 @@ export const en: Dictionary = {
           "GitHub API integration with loading and error states",
           "Fully responsive across mobile, tablet, and desktop",
           "SEO, accessibility, and performance optimizations",
+        ],
+      },
+      {
+        slug: "enterprise-operations-platform",
+        title: "Enterprise Operations Platform",
+        description:
+          "An operations platform designed for maintainable, modular enterprise workflows and long-term iteration.",
+        stack: ["C#", ".NET", "SQL", "Clean Architecture"],
+        github: "https://github.com/EmirKoroglu3/enterprise-operations-platform",
+        highlights: [
+          "Modular structure with clear boundaries",
+          "Production-friendly validation and error handling",
+          "Architecture that scales with new features",
+          "Readable, well-documented codebase",
         ],
       },
     ],

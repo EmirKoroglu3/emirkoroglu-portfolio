@@ -56,7 +56,7 @@ export const de: Dictionary = {
     contactMe: "Kontakt aufnehmen",
     productThinking: "PRODUKTDENKEN",
     productText:
-      "Enterprise-Softwareentwicklung in Hotellerie und Tourismus. Ich entwickle mit C#, .NET, TypeScript und React, mit Fokus auf Clean Architecture und sichere Programmierung.",
+      "Ich entwickle produktionsreife, skalierbare Webanwendungen. Ich arbeite mit C#, .NET, TypeScript und React, mit Fokus auf Clean Architecture und sichere Programmierung.",
     focus: "Fokus",
     focusValue: "Skalierbare Produkte",
     strength: "Stärke",
@@ -70,7 +70,7 @@ export const de: Dictionary = {
     eyebrow: "ÜBER MICH",
     title: "Enterprise-Erfahrung. Umsetzung auf Produktniveau.",
     description:
-      "Junior Software Developer bei ATG Hospitality , Branchenerfahrung in der Hotellerie kombiniert mit moderner Full-Stack-Entwicklung.",
+      "Junior Software Developer bei ATG Hospitality, mit Fokus auf moderne Full-Stack-Entwicklung und saubere Softwarearchitektur.",
     positioning: "POSITIONIERUNG",
     positioningText:
       "Absolvent der Akdeniz Universität (Wirtschaftsinformatik, 2025). Mir sind Clean Architecture, sichere Programmierung und Software wichtig, die echte Geschäftsprobleme löst.",
@@ -204,6 +204,20 @@ export const de: Dictionary = {
           "GitHub-API-Integration mit Lade- und Fehlerzuständen",
           "Vollständig responsiv auf Mobil, Tablet und Desktop",
           "SEO-, Barrierefreiheits- und Performance-Optimierungen",
+        ],
+      },
+      {
+        slug: "enterprise-operations-platform",
+        title: "Enterprise Operations Platform",
+        description:
+          "Eine Operations-Plattform für wartbare, modulare Enterprise-Workflows und langfristige Weiterentwicklung.",
+        stack: ["C#", ".NET", "SQL", "Clean Architecture"],
+        github: "https://github.com/EmirKoroglu3/enterprise-operations-platform",
+        highlights: [
+          "Modulare Struktur mit klaren Grenzen",
+          "Validierung und Fehlerhandling für Production-Workflows",
+          "Architektur, die mit neuen Features skaliert",
+          "Lesbarer, gut dokumentierter Code",
         ],
       },
     ],
