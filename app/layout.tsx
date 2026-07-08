@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 import { AppProviders } from "@/components/providers/AppProviders";
 import { getDictionary } from "@/lib/i18n";
@@ -52,6 +53,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body className="bg-bg text-text antialiased">
         <AppProviders initialLocale={locale}>{children}</AppProviders>
+        <Analytics />
       </body>
     </html>
   );
