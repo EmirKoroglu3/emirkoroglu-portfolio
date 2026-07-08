@@ -1,0 +1,288 @@
+import type { Dictionary } from "../types";
+
+export const de: Dictionary = {
+  meta: {
+    htmlLang: "de",
+    localeName: "Deutsch",
+    keywords: [
+      "Emir Köroğlu",
+      "Full-Stack-Entwickler",
+      "React",
+      "Next.js",
+      "C#",
+      ".NET",
+      "Portfolio",
+      "Webentwickler",
+      "Antalya",
+    ],
+  },
+  common: {
+    contact: "Kontakt",
+    scroll: "Scrollen",
+    openMenu: "Menü öffnen",
+    closeMenu: "Menü schließen",
+    backToTop: "Nach oben",
+    rights: "Alle Rechte vorbehalten.",
+    send: "Senden",
+    sending: "Wird gesendet…",
+    successMessage: "Nachricht gesendet. Ich melde mich in Kürze bei Ihnen.",
+    github: "GitHub",
+    linkedin: "LinkedIn",
+    email: "E-Mail",
+    liveDemo: "Live-Demo",
+    closeProject: "Projekt schließen",
+    openProject: "Öffnen",
+    cvEn: "CV (EN)",
+    cvTr: "CV (TR)",
+    downloadCvEn: "Englischen Lebenslauf herunterladen",
+    downloadCvTr: "Türkischen Lebenslauf herunterladen",
+    themeLight: "Helles Design",
+    themeDark: "Dunkles Design",
+    language: "Sprache",
+  },
+  nav: {
+    about: "Über mich",
+    stack: "Tech",
+    experience: "Erfahrung",
+    certifications: "Zertifikate",
+    projects: "Projekte",
+    "case-studies": "Fallstudien",
+    github: "GitHub",
+    contact: "Kontakt",
+  },
+  hero: {
+    badge: "Offen für neue Möglichkeiten",
+    viewProjects: "Projekte ansehen",
+    contactMe: "Kontakt aufnehmen",
+    productThinking: "PRODUKTDENKEN",
+    productText:
+      "Enterprise-Softwareentwicklung in Hotellerie und Tourismus. Ich entwickle mit C#, .NET, TypeScript und React, mit Fokus auf Clean Architecture und sichere Programmierung.",
+    focus: "Fokus",
+    focusValue: "Skalierbare Produkte",
+    strength: "Stärke",
+    strengthValue: "Problemlösung",
+    style: "Stil",
+    styleValue: "Minimalistisches Premium-UI",
+    stack: "Stack",
+    stackValue: "Full Stack",
+  },
+  about: {
+    eyebrow: "ÜBER MICH",
+    title: "Enterprise-Erfahrung. Umsetzung auf Produktniveau.",
+    description:
+      "Junior Software Developer bei ATG Hospitality , Branchenerfahrung in der Hotellerie kombiniert mit moderner Full-Stack-Entwicklung.",
+    positioning: "POSITIONIERUNG",
+    positioningText:
+      "Absolvent der Akdeniz Universität (Wirtschaftsinformatik, 2025). Mir sind Clean Architecture, sichere Programmierung und Software wichtig, die echte Geschäftsprobleme löst.",
+    highlights: [
+      "Saubere Komponentenarchitektur",
+      "Premium-Mikrointeraktionen",
+      "Standardmäßig responsiv",
+      "Fokus auf SEO und Performance",
+    ],
+    stats: [
+      { label: "Erfahrung", value: "2+ Jahre" },
+      { label: "Öffentliche Projekte", value: "3" },
+      { label: "Ausbildung", value: "Akdeniz Uni." },
+      { label: "Zertifikate", value: "10+" },
+    ],
+    paragraphs: [
+      "Ich bin Full-Stack-Entwickler in Antalya und arbeite derzeit als Junior Software Developer bei ATG Hospitality und Anex Tour. Ich entwickle Webanwendungen mit Fokus auf Clean Architecture, Wartbarkeit und echten Geschäftswert.",
+      "Mein Hintergrund verbindet Enterprise-Softwareumgebungen mit praktischer Entwicklung in C#, .NET, TypeScript, React, Next.js und Python. Ich setze Geschäftsanforderungen gerne in zuverlässige, nutzerorientierte digitale Produkte um.",
+      "Ich habe an der Akdeniz Universität (Wirtschaftsinformatik, 2025) studiert und entwickle mich kontinuierlich weiter, durch Produktionsarbeit und strukturiertes Lernen, einschließlich Zertifikaten in .NET, Clean Architecture, OWASP Secure Coding und Full-Stack-Webentwicklung.",
+    ],
+  },
+  tech: {
+    eyebrow: "TECH-STACK",
+    title: "Moderne Tools, saubere Umsetzung.",
+    description:
+      "Ein interaktiver Überblick über die Technologien, mit denen ich skalierbare, produktionsreife Webanwendungen entwickle.",
+    tabs: {
+      frontend: "Frontend",
+      backend: "Backend",
+      database: "Datenbank",
+      tools: "Tools",
+    },
+    cardHint: "Für subtilen Glow hovern, premium, nicht aufdringlich.",
+  },
+  experience: {
+    eyebrow: "ERFAHRUNG",
+    title: "Enterprise-Rollen mit echtem Praxisbezug.",
+    description:
+      "Produktionserfahrung in Hotellerie und Tourismus, zuverlässige Software mit Clean Architecture und Secure Coding.",
+    items: [
+      {
+        company: "ATG Hospitality",
+        org: "Anex Tour",
+        role: "Junior Software Developer",
+        location: "Antalya, Türkei",
+        start: "Mai 2025",
+        end: "Aktuell",
+        bullets: [
+          "Entwicklung und Wartung von Enterprise-Webanwendungen in Hotellerie und Tourismus",
+          "Zusammenarbeit mit funktionsübergreifenden Teams an geschäftsorientierten Lösungen",
+          "Anwendung von Clean Architecture und sicherer Programmierung in Produktionsprozessen",
+          "Unterstützung digitaler Systeme in internationalen Operationen",
+        ],
+      },
+      {
+        company: "ATG Hospitality",
+        org: "Anex Tour",
+        role: "Software Developer Intern",
+        location: "Antalya, Türkei",
+        start: "Feb. 2025",
+        end: "Mai 2025",
+        bullets: [
+          "Praktische Erfahrung mit .NET und Full-Stack-Entwicklung in Enterprise-Teams",
+          "Beitrag zu internen Tools und Application-Support-Prozessen",
+          "Teilnahme an Code Reviews, Troubleshooting und Geschäftsprozessanalyse",
+          "Aufbau grundlegender Fähigkeiten in skalierbarer Backend- und Frontend-Entwicklung",
+        ],
+      },
+    ],
+  },
+  certifications: {
+    eyebrow: "ZERTIFIKATE",
+    title: "Verifiziertes Lernen mit echten Credentials.",
+    description:
+      "Ausgewählte Udemy-Zertifikate aus meinem LinkedIn-Profil, Fokus auf Full-Stack-Entwicklung, Architektur und Secure Coding.",
+    viewCertificate: "Zertifikat ansehen",
+    items: [
+      { slug: "owasp-secure-coding", title: "Secure Coding Based on OWASP" },
+      { slug: "fullstack-web", title: "Full-Stack-Webentwicklung von Grund auf" },
+      { slug: "csharp-oop-layers", title: "C# OOP Schichtenarchitektur" },
+      { slug: "frontend-web", title: "Frontend-Webentwicklung (praxisnah)" },
+      { slug: "net8-clean-architecture", title: ".NET 8 API/Web | NLayer & Clean Architecture" },
+      { slug: "sql-applications", title: "SQL mit praktischen Anwendungen" },
+      { slug: "python-bootcamp", title: "The Complete Python Bootcamp" },
+      { slug: "csharp-fundamentals", title: "C# Grundlagen" },
+    ],
+  },
+  projects: {
+    eyebrow: "AUSGEWÄHLTE PROJEKTE",
+    title: "Visuell stark. Technisch fundiert.",
+    description:
+      "Ein Premium-Grid mit verfeinerten Mikrointeraktionen und schneller Projekt-Vorschau.",
+    items: [
+      {
+        slug: "fitlog",
+        title: "FitLog",
+        description:
+          "Eine Fitness-Tracking-Anwendung mit Clean Architecture, klare Trennung der Schichten für langfristige Wartbarkeit und skalierbares Feature-Wachstum.",
+        stack: ["TypeScript", "C#", ".NET", "Clean Architecture", "CSS"],
+        github: "https://github.com/EmirKoroglu3/FitLog",
+        highlights: [
+          "Schichtenarchitektur mit klaren Domain-Grenzen",
+          "TypeScript-Frontend mit C#-Backend",
+          "Für Wartbarkeit und zukünftige Feature-Erweiterung konzipiert",
+          "Open-Source-Projekt mit MIT-Lizenz",
+        ],
+      },
+      {
+        slug: "todo-assistant",
+        title: "Todo Assistant",
+        description:
+          "Ein Python-basierter Aufgaben-Assistent, Experimente mit Backend-Logik, Datenverarbeitung und praktischen Full-Stack-Mustern.",
+        stack: ["Python", "Flask", "HTML", "JavaScript"],
+        github: "https://github.com/EmirKoroglu3/todo_assistantt",
+        highlights: [
+          "Backend-orientierte Python-Anwendung",
+          "Praktische CRUD- und Aufgabenverwaltungs-Flows",
+          "Grundlage für API-Integrationen und Assistenten-Features",
+          "Praktische Experimente mit Full-Stack-Strukturen",
+        ],
+      },
+      {
+        slug: "portfolio",
+        title: "Developer Portfolio",
+        description:
+          "Ein Premium-Portfolio mit Next.js App Router, präsentiert Projekte, Erfahrung und GitHub-Aktivität mit SaaS-inspiriertem Designsystem.",
+        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        github: "https://github.com/EmirKoroglu3",
+        highlights: [
+          "Dark-First-Designsystem mit Glassmorphism und Motion",
+          "GitHub-API-Integration mit Lade- und Fehlerzuständen",
+          "Vollständig responsiv auf Mobil, Tablet und Desktop",
+          "SEO-, Barrierefreiheits- und Performance-Optimierungen",
+        ],
+      },
+    ],
+  },
+  caseStudies: {
+    eyebrow: "FALLSTUDIEN",
+    title: "Wie ich komplexe Produktprobleme angehe.",
+    description:
+      "Ausgewählte Deep-Dives zu Architekturentscheidungen, Enterprise-Anforderungen und messbaren Ergebnissen, jenseits einer einfachen Projektliste.",
+    problem: "PROBLEM",
+    solution: "LÖSUNG",
+    items: [
+      {
+        slug: "fitlog-clean-architecture",
+        title: "FitLog: Eine wartbare Fitness-Plattform mit Clean Architecture",
+        problem:
+          "Die meisten Fitness-Apps starten mit wenigen Screens und wachsen organisch. Mit der Zeit landet Workout-Logik in UI-Komponenten, Datenbankabfragen sickern in Controller, und jedes neue Feature wird schwerer auszuliefern. Diese Kosten sind am ersten Tag selten sichtbar, sie steigen, wenn das Produkt skaliert, Onboarding langsamer wird und Regressionen zunehmen.",
+        solution:
+          "Ich habe FitLog nach Clean-Architecture-Prinzipien mit klaren Grenzen strukturiert: eine Domain-Schicht für Geschäftsregeln, Anwendungsservices für Use Cases, Infrastruktur für Persistenz und externe APIs sowie eine TypeScript-Präsentationsschicht. Das C#/.NET-Backend bietet eine stabile API-Oberfläche, während das Frontend die Experience optimiert, jede Schicht kann unabhängig weiterentwickelt werden.",
+        technologies: ["TypeScript", "C#", ".NET", "Clean Architecture", "CSS"],
+        results: [
+          "Klare Verantwortlichkeiten in Domain-, Anwendungs-, Infrastruktur- und Präsentationsschicht",
+          "Neue Tracking-Features (Mahlzeiten, Workouts, Fortschritt) ohne Neuschreiben bestehender Module",
+          "Testbare Geschäftslogik, isoliert von Frameworks und UI-Belangen",
+          "Open-Source-Referenz für Enterprise-Schichtenarchitektur in einem realen Produktkontext",
+        ],
+      },
+      {
+        slug: "enterprise-hospitality",
+        title: "Enterprise-Software für Hotellerie- und Tourismusprozesse",
+        problem:
+          "Internationale Hotel- und Reiseveranstalter sind auf mission-kritische Systeme für Reservierung, Betrieb, Finanzen und Compliance angewiesen. Ein einziger Fehler kann tägliche Abläufe für Hunderte Mitarbeitender stören. Software muss hier Sicherheit, Legacy-Integrationen und schnelle Geschäftsänderungen ausbalancieren, und für nicht-technische Stakeholder verständlich bleiben.",
+        solution:
+          "Bei ATG Hospitality und Anex Tour arbeite ich an produktiven .NET-Anwendungen in realen Betriebsumgebungen. Ich übersetze Geschäftsanforderungen in wartbare C#-Lösungen, wende OWASP Secure Coding an, integriere SQL Server und REST-Services und liefere gemeinsam mit internationalen Teams zuverlässige Features termingerecht.",
+        technologies: ["C#", ".NET", "SQL Server", "REST APIs", "OWASP"],
+        results: [
+          "Praxisnahe Produktionserfahrung in Enterprise-Hotellerie- und Tourismus-Systemen",
+          "Starke Verbindung zwischen Geschäftsprozessen und sauberer, sicherer Umsetzung",
+          "Anwendung von OWASP-Prinzipien zur Reduktion typischer Web-Sicherheitsrisiken",
+          "Effektive Zusammenarbeit mit Produkt, QA und Operations in schnellen Delivery-Zyklen",
+        ],
+      },
+    ],
+  },
+  github: {
+    eyebrow: "GITHUB",
+    title: "Live-Statistiken mit robusten Zuständen.",
+    description: "GitHub-API-Integration mit Lade-, Fehlerbehandlung und sauberem Daten-Mapping.",
+    repositories: "REPOSITORIES",
+    stars: "STARS",
+    followers: "FOLLOWER",
+    following: "FOLGT",
+    topLanguages: "TOP-SPRACHEN",
+    errorTitle: "GitHub-Daten nicht verfügbar",
+    errorHint: "Sie können GITHUB_USERNAME in Ihrer Umgebung setzen.",
+    languages: ["C#", ".NET", "React"],
+  },
+  contact: {
+    eyebrow: "KONTAKT",
+    title: "Ein Premium-Kontaktfluss: einfach und klar.",
+    description:
+      "Senden Sie eine Nachricht oder kontaktieren Sie mich über soziale Links. Mit sauberen Zuständen und barrierefreien Interaktionen.",
+    name: "Name",
+    namePlaceholder: "Ihr Name",
+    email: "E-Mail",
+    emailPlaceholder: "sie@beispiel.de",
+    subject: "Betreff",
+    subjectPlaceholder: "Worum geht es?",
+    message: "Nachricht",
+    messagePlaceholder: "Erzählen Sie mir, was Sie entwickeln…",
+    sendAria: "Nachricht senden",
+    errorGeneric: "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.",
+    errorNotConfigured: "E-Mail-Dienst ist noch nicht konfiguriert. Bitte kontaktieren Sie mich direkt per E-Mail.",
+    errorRateLimited: "Zu viele Nachrichten gesendet. Bitte warten Sie einige Minuten und versuchen Sie es erneut.",
+  },
+  profile: {
+    name: "Emir Köroğlu",
+    role: "Full Stack Developer",
+    tagline: "Ich entwickle moderne, skalierbare und nutzerorientierte Webanwendungen.",
+    location: "Antalya, Türkei",
+  },
+};

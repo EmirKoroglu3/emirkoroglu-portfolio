@@ -1,0 +1,288 @@
+import type { Dictionary } from "../types";
+
+export const ru: Dictionary = {
+  meta: {
+    htmlLang: "ru",
+    localeName: "Русский",
+    keywords: [
+      "Emir Köroğlu",
+      "Full Stack разработчик",
+      "React",
+      "Next.js",
+      "C#",
+      ".NET",
+      "портфолио",
+      "веб-разработчик",
+      "Анталья",
+    ],
+  },
+  common: {
+    contact: "Контакты",
+    scroll: "Прокрутить",
+    openMenu: "Открыть меню",
+    closeMenu: "Закрыть меню",
+    backToTop: "Наверх",
+    rights: "Все права защищены.",
+    send: "Отправить",
+    sending: "Отправка…",
+    successMessage: "Сообщение отправлено. Я свяжусь с вами в ближайшее время.",
+    github: "GitHub",
+    linkedin: "LinkedIn",
+    email: "Эл. почта",
+    liveDemo: "Демо",
+    closeProject: "Закрыть проект",
+    openProject: "Открыть",
+    cvEn: "CV (EN)",
+    cvTr: "CV (TR)",
+    downloadCvEn: "Скачать резюме на английском",
+    downloadCvTr: "Скачать резюме на турецком",
+    themeLight: "Светлая тема",
+    themeDark: "Тёмная тема",
+    language: "Язык",
+  },
+  nav: {
+    about: "Обо мне",
+    stack: "Технологии",
+    experience: "Опыт",
+    certifications: "Сертификаты",
+    projects: "Проекты",
+    "case-studies": "Кейсы",
+    github: "GitHub",
+    contact: "Контакты",
+  },
+  hero: {
+    badge: "Открыт к новым возможностям",
+    viewProjects: "Смотреть проекты",
+    contactMe: "Связаться",
+    productThinking: "ПРОДУКТОВОЕ МЫШЛЕНИЕ",
+    productText:
+      "Корпоративная разработка ПО в сфере гостеприимства и туризма. Работаю с C#, .NET, TypeScript и React, с акцентом на чистую архитектуру и безопасный код.",
+    focus: "Фокус",
+    focusValue: "Масштабируемые продукты",
+    strength: "Сильная сторона",
+    strengthValue: "Решение проблем",
+    style: "Стиль",
+    styleValue: "Минималистичный premium UI",
+    stack: "Стек",
+    stackValue: "Full Stack",
+  },
+  about: {
+    eyebrow: "ОБО МНЕ",
+    title: "Корпоративный опыт. Реализация уровня продукта.",
+    description:
+      "Junior Software Developer в ATG Hospitality и Anex Tour, сочетаю отраслевой опыт в гостеприимстве с современной full stack разработкой.",
+    positioning: "ПОЗИЦИОНИРОВАНИЕ",
+    positioningText:
+      "Выпускник Университета Акдениз (Информационные системы в управлении, 2025). Для меня важны чистая архитектура, безопасный код и ПО, решающее реальные бизнес-задачи.",
+    highlights: [
+      "Чистая компонентная архитектура",
+      "Премиальные микроинтеракции",
+      "Адаптивность по умолчанию",
+      "Фокус на SEO и производительности",
+    ],
+    stats: [
+      { label: "Опыт", value: "2+ года" },
+      { label: "Публичные проекты", value: "3" },
+      { label: "Образование", value: "Унив. Акдениз" },
+      { label: "Сертификаты", value: "10+" },
+    ],
+    paragraphs: [
+      "Я Full Stack разработчик из Антальи, сейчас работаю Junior Software Developer в ATG Hospitality. Создаю веб-приложения с акцентом на чистую архитектуру, поддерживаемость и реальную бизнес-ценность.",
+      "Мой опыт сочетает корпоративные программные среды с практической разработкой на C#, .NET, TypeScript, React, Next.js и Python. Мне нравится превращать бизнес-требования в надёжные, ориентированные на пользователя цифровые продукты.",
+      "Окончил Университет Акдениз (Информационные системы в управлении, 2025) и постоянно развиваюсь через продакшн-работу и структурированное обучение, включая сертификаты по .NET, Clean Architecture, OWASP и full stack веб-разработке.",
+    ],
+  },
+  tech: {
+    eyebrow: "ТЕХНОЛОГИИ",
+    title: "Современные инструменты, чистая реализация.",
+    description:
+      "Интерактивный обзор технологий, которые я использую для создания масштабируемых production-ready веб-приложений.",
+    tabs: {
+      frontend: "Frontend",
+      backend: "Backend",
+      database: "База данных",
+      tools: "Инструменты",
+    },
+    cardHint: "Наведите для мягкого свечения, premium, без излишеств.",
+  },
+  experience: {
+    eyebrow: "ОПЫТ",
+    title: "Корпоративные роли с реальным практическим опытом.",
+    description:
+      "Production-опыт в гостеприимстве и туризме, надёжное ПО с clean architecture и secure coding.",
+    items: [
+      {
+        company: "ATG Hospitality",
+        org: "Anex Tour",
+        role: "Junior Software Developer",
+        location: "Анталья, Турция",
+        start: "Май 2025",
+        end: "Настоящее время",
+        bullets: [
+          "Разработка и поддержка корпоративных веб-приложений в гостеприимстве и туризме",
+          "Сотрудничество с кросс-функциональными командами над бизнес-решениями",
+          "Применение чистой архитектуры и безопасного кодирования в production",
+          "Поддержка цифровых систем в международных операциях",
+        ],
+      },
+      {
+        company: "ATG Hospitality",
+        org: "Anex Tour",
+        role: "Software Developer Intern",
+        location: "Анталья, Турция",
+        start: "Фев 2025",
+        end: "Май 2025",
+        bullets: [
+          "Практический опыт .NET и full stack разработки в корпоративных командах",
+          "Участие во внутренних инструментах и процессах поддержки приложений",
+          "Code review, troubleshooting и анализ бизнес-процессов",
+          "Базовые навыки масштабируемой backend и frontend разработки",
+        ],
+      },
+    ],
+  },
+  certifications: {
+    eyebrow: "СЕРТИФИКАТЫ",
+    title: "Подтверждённое обучение с реальными credentials.",
+    description:
+      "Избранные сертификаты Udemy из моего LinkedIn, full stack, архитектура и безопасное кодирование.",
+    viewCertificate: "Открыть сертификат",
+    items: [
+      { slug: "owasp-secure-coding", title: "Secure Coding Based on OWASP" },
+      { slug: "fullstack-web", title: "Full Stack веб-разработка с нуля" },
+      { slug: "csharp-oop-layers", title: "C# OOP и слоистая архитектура" },
+      { slug: "frontend-web", title: "Frontend веб-разработка (практика)" },
+      { slug: "net8-clean-architecture", title: ".NET 8 API/Web | NLayer & Clean Architecture" },
+      { slug: "sql-applications", title: "SQL с практическими приложениями" },
+      { slug: "python-bootcamp", title: "The Complete Python Bootcamp" },
+      { slug: "csharp-fundamentals", title: "Основы C#" },
+    ],
+  },
+  projects: {
+    eyebrow: "ИЗБРАННЫЕ ПРОЕКТЫ",
+    title: "Визуально сильные. Технически обоснованные.",
+    description:
+      "Premium-сетка с отточенными микроинтеракциями и быстрым предпросмотром проектов.",
+    items: [
+      {
+        slug: "fitlog",
+        title: "FitLog",
+        description:
+          "Приложение для фитнес-трекинга на Clean Architecture, чёткое разделение слоёв для долгосрочной поддерживаемости и масштабируемого роста функций.",
+        stack: ["TypeScript", "C#", ".NET", "Clean Architecture", "CSS"],
+        github: "https://github.com/EmirKoroglu3/FitLog",
+        highlights: [
+          "Слоистая архитектура с чёткими границами домена",
+          "TypeScript frontend с C# backend",
+          "Спроектировано для поддерживаемости и расширения",
+          "Open-source проект с лицензией MIT",
+        ],
+      },
+      {
+        slug: "todo-assistant",
+        title: "Todo Assistant",
+        description:
+          "Ассистент задач на Python, эксперименты с backend-логикой, обработкой данных и практическими full stack паттернами.",
+        stack: ["Python", "Flask", "HTML", "JavaScript"],
+        github: "https://github.com/EmirKoroglu3/todo_assistantt",
+        highlights: [
+          "Backend-ориентированное Python-приложение",
+          "Практические CRUD и потоки управления задачами",
+          "Основа для API-интеграций и функций ассистента",
+          "Практические эксперименты со full stack структурами",
+        ],
+      },
+      {
+        slug: "portfolio",
+        title: "Портфолио разработчика",
+        description:
+          "Premium-портфолио на Next.js App Router, демонстрирует проекты, опыт и активность GitHub с SaaS-вдохновлённой дизайн-системой.",
+        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+        github: "https://github.com/EmirKoroglu3",
+        highlights: [
+          "Dark-first дизайн-система с glassmorphism и анимацией",
+          "Интеграция GitHub API с состояниями загрузки и ошибок",
+          "Полная адаптивность на мобильных, планшетах и десктопе",
+          "SEO, доступность и оптимизация производительности",
+        ],
+      },
+    ],
+  },
+  caseStudies: {
+    eyebrow: "КЕЙСЫ",
+    title: "Как я подхожу к сложным продуктовым задачам.",
+    description:
+      "Избранные разборы архитектурных решений, enterprise-ограничений и измеримых результатов, за пределами обычного списка проектов.",
+    problem: "ПРОБЛЕМА",
+    solution: "РЕШЕНИЕ",
+    items: [
+      {
+        slug: "fitlog-clean-architecture",
+        title: "FitLog: Поддерживаемая фитнес-платформа на Clean Architecture",
+        problem:
+          "Большинство фитнес-приложений начинаются с нескольких экранов и растут органично. Со временем логика тренировок оказывается в UI-компонентах, SQL-запросы просачиваются в контроллеры, и каждая новая функция выходит сложнее. Эта цена редко заметна в первый день, она накапливается по мере роста продукта, замедления онбординга и увеличения регрессий.",
+        solution:
+          "Я спроектировал FitLog по принципам Clean Architecture с чёткими границами: доменный слой для бизнес-правил, сервисы приложения для use case'ов, инфраструктура для хранения и внешних API, и presentation-слой на TypeScript. C#/.NET backend даёт стабильный API, а frontend фокусируется на UX, каждый слой можно развивать независимо, не ломая систему.",
+        technologies: ["TypeScript", "C#", ".NET", "Clean Architecture", "CSS"],
+        results: [
+          "Чёткое разделение ответственности между domain, application, infrastructure и presentation",
+          "Новые функции трекинга (питание, тренировки, прогресс) без переписывания модулей",
+          "Тестируемая бизнес-логика, изолированная от фреймворков и UI",
+          "Open-source референс enterprise-слоистой архитектуры в реальном продукте",
+        ],
+      },
+      {
+        slug: "enterprise-hospitality",
+        title: "Корпоративное ПО для гостиничного и туристического бизнеса",
+        problem:
+          "Международные отельные и туроператорские компании зависят от критически важных систем бронирования, операций, финансов и compliance. Один дефект может нарушить ежедневные процессы сотен сотрудников. ПО должно балансировать безопасность, legacy-интеграции и быстрые изменения бизнеса, оставаясь понятным для нетехнических стейкхолдеров.",
+        solution:
+          "В ATG Hospitality и Anex Tour я работаю с production .NET-приложениями в реальных операционных средах. Перевожу бизнес-требования в поддерживаемые C#-решения, применяю OWASP secure coding, интегрирую SQL Server и REST-сервисы и вместе с международными командами поставляю надёжные функции в срок.",
+        technologies: ["C#", ".NET", "SQL Server", "REST APIs", "OWASP"],
+        results: [
+          "Практический production-опыт в enterprise-системах гостеприимства и туризма",
+          "Сильная связь между бизнес-процессами и чистой, безопасной реализацией",
+          "Применение OWASP для снижения типичных уязвимостей веб-приложений",
+          "Эффективная кросс-функциональная работа с product, QA и operations в быстрых циклах поставки",
+        ],
+      },
+    ],
+  },
+  github: {
+    eyebrow: "GITHUB",
+    title: "Живая статистика с устойчивыми состояниями.",
+    description: "Интеграция GitHub API с загрузкой, обработкой ошибок и чистым маппингом данных.",
+    repositories: "РЕПОЗИТОРИИ",
+    stars: "ЗВЁЗДЫ",
+    followers: "ПОДПИСЧИКИ",
+    following: "ПОДПИСКИ",
+    topLanguages: "ОСНОВНЫЕ ЯЗЫКИ",
+    errorTitle: "Данные GitHub недоступны",
+    errorHint: "Вы можете задать GITHUB_USERNAME в переменных окружения.",
+    languages: ["C#", ".NET", "React"],
+  },
+  contact: {
+    eyebrow: "КОНТАКТЫ",
+    title: "Premium-контакт: просто и понятно.",
+    description:
+      "Отправьте сообщение или свяжитесь через соцсети. С корректными состояниями и доступными взаимодействиями.",
+    name: "Имя",
+    namePlaceholder: "Ваше имя",
+    email: "Эл. почта",
+    emailPlaceholder: "you@example.com",
+    subject: "Тема",
+    subjectPlaceholder: "О чём речь?",
+    message: "Сообщение",
+    messagePlaceholder: "Расскажите, что вы создаёте…",
+    sendAria: "Отправить сообщение",
+    errorGeneric: "Не удалось отправить сообщение. Попробуйте позже.",
+    errorNotConfigured: "Почтовый сервис ещё не настроен. Свяжитесь со мной напрямую по email.",
+    errorRateLimited: "Слишком много сообщений. Подождите несколько минут и попробуйте снова.",
+  },
+  profile: {
+    name: "Emir Köroğlu",
+    role: "Full Stack Developer",
+    tagline: "Создаю современные, масштабируемые и ориентированные на пользователя веб-приложения.",
+    location: "Анталья, Турция",
+  },
+};

@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+/* ===== Shared tokens ===== */
+:root {
+  --radius-xl: 14px;
+  --radius-2xl: 18px;
+  --radius-3xl: 26px;
+  --space-gutter-x: clamp(16px, 4vw, 32px);
+  --space-section-y: clamp(64px, 10vw, 120px);
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+  --text-5xl: 3.75rem;
+  --text-6xl: 4.5rem;
+  --leading-tight: 1.08;
+  --leading-body: 1.55;
+  --accent: 210 92% 58%;
+  --accent-2: 265 90% 65%;
+  --ring: 210 92% 58%;
+  --danger: 0 85% 60%;
+  --success: 142 70% 45%;
+}
+
+/* ===== Dark theme (default) ===== */
+.dark {
+  --bg: 240 8% 4%;
+  --surface: 240 7% 7%;
+  --surface-2: 240 6% 10%;
+  --border: 240 6% 22%;
+  --text: 0 0% 98%;
+  --text-2: 240 6% 72%;
+  --text-3: 240 5% 55%;
+  --overlay: 0 0% 0%;
+  --glow-blue: 59 130 246;
+  --glow-purple: 124 58 237;
+  --gradient-a: rgba(124, 58, 237, 0.14);
+  --gradient-b: rgba(59, 130, 246, 0.18);
+  --gradient-c: rgba(255, 255, 255, 0.04);
+  --selection: rgba(59, 130, 246, 0.35);
+  --scrollbar: rgba(255, 255, 255, 0.08);
+  --scrollbar-hover: rgba(255, 255, 255, 0.14);
+}
+
+/* ===== Light theme ===== */
+.light {
+  --bg: 220 20% 97%;
+  --surface: 0 0% 100%;
+  --surface-2: 220 16% 94%;
+  --border: 220 14% 86%;
+  --text: 222 22% 12%;
+  --text-2: 220 10% 38%;
+  --text-3: 220 8% 52%;
+  --overlay: 0 0% 100%;
+  --glow-blue: 59 130 246;
+  --glow-purple: 124 58 237;
+  --gradient-a: rgba(124, 58, 237, 0.08);
+  --gradient-b: rgba(59, 130, 246, 0.1);
+  --gradient-c: rgba(0, 0, 0, 0.02);
+  --selection: rgba(59, 130, 246, 0.22);
+  --scrollbar: rgba(0, 0, 0, 0.12);
+  --scrollbar-hover: rgba(0, 0, 0, 0.2);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  line-height: var(--leading-body);
+  color: hsl(var(--text));
+  background:
+    radial-gradient(1200px 700px at 20% 10%, var(--gradient-a), transparent 55%),
+    radial-gradient(900px 600px at 80% 0%, var(--gradient-b), transparent 50%),
+    radial-gradient(900px 600px at 50% 100%, var(--gradient-c), transparent 55%),
+    hsl(var(--bg));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: var(--selection);
+}
+
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 3px;
+}
+
+/* Semantic utilities */
+.text-foreground {
+  color: hsl(var(--text));
+}
+.text-muted {
+  color: hsl(var(--text-2));
+}
+.text-faint {
+  color: hsl(var(--text-3));
+}
+.border-glass {
+  border-color: hsl(var(--border) / 0.65);
+}
+.bg-glass {
+  background-color: hsl(var(--surface) / 0.55);
+}
+.bg-glass-subtle {
+  background-color: hsl(var(--surface) / 0.38);
+}
+.bg-glass-strong {
+  background-color: hsl(var(--surface-2) / 0.72);
+}
+.hover\:bg-glass-hover:hover {
+  background-color: hsl(var(--surface-2) / 0.82);
+}
+.hover\:border-glass-strong:hover {
+  border-color: hsl(var(--border) / 0.9);
+}
+.panel {
+  border: 1px solid hsl(var(--border) / 0.65);
+  background-color: hsl(var(--surface) / 0.55);
+  backdrop-filter: blur(12px);
+}
+.panel-strong {
+  border: 1px solid hsl(var(--border) / 0.7);
+  background-color: hsl(var(--surface) / 0.72);
+  backdrop-filter: blur(12px);
+}
+.divider-gradient {
+  background: linear-gradient(to right, hsl(var(--border) / 0.55), hsl(var(--border) / 0.15), transparent);
+}
+.overlay-backdrop {
+  background-color: hsl(var(--overlay) / 0.6);
+}
+
+.noise {
+  position: relative;
+}
+.noise::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
