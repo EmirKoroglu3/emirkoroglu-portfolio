@@ -88,7 +88,7 @@ export const de: Dictionary = {
     ],
     paragraphs: [
       "Ich bin Full-Stack-Entwickler in Antalya und arbeite derzeit als Junior Software Developer bei ATG Hospitality und Anex Tour. Ich entwickle Webanwendungen mit Fokus auf Clean Architecture, Wartbarkeit und echten Geschäftswert.",
-      "Mein Hintergrund verbindet Enterprise-Softwareumgebungen mit praktischer Entwicklung in C#, .NET, TypeScript, React, Next.js und Python. Ich setze Geschäftsanforderungen gerne in zuverlässige, nutzerorientierte digitale Produkte um.",
+      "Mein Hintergrund verbindet Enterprise-Softwareumgebungen mit praktischer Entwicklung in C#, .NET, TypeScript, React und Next.js. Ich setze Geschäftsanforderungen gerne in zuverlässige, nutzerorientierte digitale Produkte um.",
       "Ich habe an der Akdeniz Universität (Wirtschaftsinformatik, 2025) studiert und entwickle mich kontinuierlich weiter, durch Produktionsarbeit und strukturiertes Lernen, einschließlich Zertifikaten in .NET, Clean Architecture, OWASP Secure Coding und Full-Stack-Webentwicklung.",
     ],
   },
@@ -113,7 +113,6 @@ export const de: Dictionary = {
     items: [
       {
         company: "ATG Hospitality",
-        org: "Anex Tour",
         role: "Junior Software Developer",
         location: "Antalya, Türkei",
         start: "Mai 2025",
@@ -127,7 +126,6 @@ export const de: Dictionary = {
       },
       {
         company: "ATG Hospitality",
-        org: "Anex Tour",
         role: "Software Developer Intern",
         location: "Antalya, Türkei",
         start: "Feb. 2025",
@@ -179,34 +177,6 @@ export const de: Dictionary = {
         ],
       },
       {
-        slug: "todo-assistant",
-        title: "Todo Assistant",
-        description:
-          "Ein Python-basierter Aufgaben-Assistent, Experimente mit Backend-Logik, Datenverarbeitung und praktischen Full-Stack-Mustern.",
-        stack: ["Python", "Flask", "HTML", "JavaScript"],
-        github: "https://github.com/EmirKoroglu3/todo_assistantt",
-        highlights: [
-          "Backend-orientierte Python-Anwendung",
-          "Praktische CRUD- und Aufgabenverwaltungs-Flows",
-          "Grundlage für API-Integrationen und Assistenten-Features",
-          "Praktische Experimente mit Full-Stack-Strukturen",
-        ],
-      },
-      {
-        slug: "portfolio",
-        title: "Developer Portfolio",
-        description:
-          "Ein Premium-Portfolio mit Next.js App Router, präsentiert Projekte, Erfahrung und GitHub-Aktivität mit SaaS-inspiriertem Designsystem.",
-        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-        github: "https://github.com/EmirKoroglu3",
-        highlights: [
-          "Dark-First-Designsystem mit Glassmorphism und Motion",
-          "GitHub-API-Integration mit Lade- und Fehlerzuständen",
-          "Vollständig responsiv auf Mobil, Tablet und Desktop",
-          "SEO-, Barrierefreiheits- und Performance-Optimierungen",
-        ],
-      },
-      {
         slug: "enterprise-operations-platform",
         title: "Enterprise Operations Platform",
         description:
@@ -247,17 +217,17 @@ export const de: Dictionary = {
       },
       {
         slug: "enterprise-hospitality",
-        title: "Enterprise-Software für Hotellerie- und Tourismusprozesse",
+        title: "Full-Stack-Entwicklung an Enterprise-ERP-Systemen",
         problem:
-          "Internationale Hotel- und Reiseveranstalter sind auf mission-kritische Systeme für Reservierung, Betrieb, Finanzen und Compliance angewiesen. Ein einziger Fehler kann tägliche Abläufe für Hunderte Mitarbeitender stören. Software muss hier Sicherheit, Legacy-Integrationen und schnelle Geschäftsänderungen ausbalancieren, und für nicht-technische Stakeholder verständlich bleiben.",
+          "Enterprise-ERP-Systeme, über die Tausende Nutzer ihre tägliche Arbeit abwickeln, bestehen aus voneinander abhängigen Modulen wie Reservierung, Buchhaltung und Betrieb. In einer Live-Umgebung kann ein einziger Fehler den Arbeitsablauf von Hunderten Nutzern lahmlegen. Neue Features müssen daher ohne Beeinträchtigung bestehender Funktionen ergänzt werden, unter Wahrung von Datenintegrität und Performance.",
         solution:
-          "Bei ATG Hospitality und Anex Tour arbeite ich an produktiven .NET-Anwendungen in realen Betriebsumgebungen. Ich übersetze Geschäftsanforderungen in wartbare C#-Lösungen, wende OWASP Secure Coding an, integriere SQL Server und REST-Services und liefere gemeinsam mit internationalen Teams zuverlässige Features termingerecht.",
-        technologies: ["C#", ".NET", "SQL Server", "REST APIs", "OWASP"],
+          "Ich arbeite am Backend und Frontend von Live-ERP-Systemen mit über 1.000 aktiven Nutzern. Das Backend entwickle ich mit C#, .NET, ASP.NET Core und Entity Framework Core, das Frontend mit React, JavaScript, HTML, CSS und Bootstrap. Ich entwickle und verbessere RESTful APIs, verbinde Frontend und Backend und richte lokale Entwicklungsumgebungen mit Docker, PostgreSQL und Microsoft SQL Server ein, mit Beiträgen zu Datenmodellierung und Query-Optimierung.",
+        technologies: ["C#", ".NET", "ASP.NET Core", "React", "PostgreSQL", "SQL Server"],
         results: [
-          "Praxisnahe Produktionserfahrung in Enterprise-Hotellerie- und Tourismus-Systemen",
-          "Starke Verbindung zwischen Geschäftsprozessen und sauberer, sicherer Umsetzung",
-          "Anwendung von OWASP-Prinzipien zur Reduktion typischer Web-Sicherheitsrisiken",
-          "Effektive Zusammenarbeit mit Produkt, QA und Operations in schnellen Delivery-Zyklen",
+          "Feature-Entwicklung und Fehlerbehebung in Reservierungs-, Buchhaltungs- und Betriebsmodulen",
+          "Beiträge zu Wartung und Weiterentwicklung von Live-ERP-Systemen mit über 1.000 aktiven Nutzern",
+          "Praktische Erfahrung mit RESTful-API-Entwicklung und Frontend-Backend-Integration",
+          "Datenmodellierung und Query-Optimierung in Docker-basierten PostgreSQL- und SQL-Server-Umgebungen",
         ],
       },
     ],

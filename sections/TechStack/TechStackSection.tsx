@@ -34,7 +34,7 @@ export function TechStackSection() {
 
         <div className="mt-10">
           <Reveal delay={0.05}>
-            <div className="panel inline-flex items-center gap-1 rounded-2xl p-1">
+            <div className="panel inline-flex max-w-full flex-wrap items-center gap-1 rounded-2xl p-1">
               {tabIds.map((id) => (
                 <button
                   key={id}

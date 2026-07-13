@@ -88,7 +88,7 @@ export const ru: Dictionary = {
     ],
     paragraphs: [
       "Я Full Stack разработчик из Антальи, сейчас работаю Junior Software Developer в ATG Hospitality. Создаю веб-приложения с акцентом на чистую архитектуру, поддерживаемость и реальную бизнес-ценность.",
-      "Мой опыт сочетает корпоративные программные среды с практической разработкой на C#, .NET, TypeScript, React, Next.js и Python. Мне нравится превращать бизнес-требования в надёжные, ориентированные на пользователя цифровые продукты.",
+      "Мой опыт сочетает корпоративные программные среды с практической разработкой на C#, .NET, TypeScript, React и Next.js. Мне нравится превращать бизнес-требования в надёжные, ориентированные на пользователя цифровые продукты.",
       "Окончил Университет Акдениз (Информационные системы в управлении, 2025) и постоянно развиваюсь через продакшн-работу и структурированное обучение, включая сертификаты по .NET, Clean Architecture, OWASP и full stack веб-разработке.",
     ],
   },
@@ -113,7 +113,6 @@ export const ru: Dictionary = {
     items: [
       {
         company: "ATG Hospitality",
-        org: "Anex Tour",
         role: "Junior Software Developer",
         location: "Анталья, Турция",
         start: "Май 2025",
@@ -127,7 +126,6 @@ export const ru: Dictionary = {
       },
       {
         company: "ATG Hospitality",
-        org: "Anex Tour",
         role: "Software Developer Intern",
         location: "Анталья, Турция",
         start: "Фев 2025",
@@ -179,34 +177,6 @@ export const ru: Dictionary = {
         ],
       },
       {
-        slug: "todo-assistant",
-        title: "Todo Assistant",
-        description:
-          "Ассистент задач на Python, эксперименты с backend-логикой, обработкой данных и практическими full stack паттернами.",
-        stack: ["Python", "Flask", "HTML", "JavaScript"],
-        github: "https://github.com/EmirKoroglu3/todo_assistantt",
-        highlights: [
-          "Backend-ориентированное Python-приложение",
-          "Практические CRUD и потоки управления задачами",
-          "Основа для API-интеграций и функций ассистента",
-          "Практические эксперименты со full stack структурами",
-        ],
-      },
-      {
-        slug: "portfolio",
-        title: "Портфолио разработчика",
-        description:
-          "Premium-портфолио на Next.js App Router, демонстрирует проекты, опыт и активность GitHub с SaaS-вдохновлённой дизайн-системой.",
-        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-        github: "https://github.com/EmirKoroglu3",
-        highlights: [
-          "Dark-first дизайн-система с glassmorphism и анимацией",
-          "Интеграция GitHub API с состояниями загрузки и ошибок",
-          "Полная адаптивность на мобильных, планшетах и десктопе",
-          "SEO, доступность и оптимизация производительности",
-        ],
-      },
-      {
         slug: "enterprise-operations-platform",
         title: "Enterprise Operations Platform",
         description:
@@ -247,17 +217,17 @@ export const ru: Dictionary = {
       },
       {
         slug: "enterprise-hospitality",
-        title: "Корпоративное ПО для гостиничного и туристического бизнеса",
+        title: "Full stack разработка корпоративных ERP-систем",
         problem:
-          "Международные отельные и туроператорские компании зависят от критически важных систем бронирования, операций, финансов и compliance. Один дефект может нарушить ежедневные процессы сотен сотрудников. ПО должно балансировать безопасность, legacy-интеграции и быстрые изменения бизнеса, оставаясь понятным для нетехнических стейкхолдеров.",
+          "Корпоративные ERP-системы, через которые тысячи пользователей ведут ежедневную работу, состоят из взаимозависимых модулей: бронирование, бухгалтерия, операции. В live-среде один дефект может остановить рабочий процесс сотен пользователей. Поэтому новые функции нужно добавлять, не ломая существующие, сохраняя целостность данных и производительность.",
         solution:
-          "В ATG Hospitality и Anex Tour я работаю с production .NET-приложениями в реальных операционных средах. Перевожу бизнес-требования в поддерживаемые C#-решения, применяю OWASP secure coding, интегрирую SQL Server и REST-сервисы и вместе с международными командами поставляю надёжные функции в срок.",
-        technologies: ["C#", ".NET", "SQL Server", "REST APIs", "OWASP"],
+          "Я работаю над backend и frontend live ERP-систем с 1,000+ активных пользователей. Backend разрабатываю на C#, .NET, ASP.NET Core и Entity Framework Core, frontend — на React, JavaScript, HTML, CSS и Bootstrap. Разрабатываю и улучшаю RESTful API, налаживаю интеграцию frontend-backend и настраиваю локальные среды разработки с Docker, PostgreSQL и Microsoft SQL Server, участвуя в моделировании данных и оптимизации запросов.",
+        technologies: ["C#", ".NET", "ASP.NET Core", "React", "PostgreSQL", "SQL Server"],
         results: [
-          "Практический production-опыт в enterprise-системах гостеприимства и туризма",
-          "Сильная связь между бизнес-процессами и чистой, безопасной реализацией",
-          "Применение OWASP для снижения типичных уязвимостей веб-приложений",
-          "Эффективная кросс-функциональная работа с product, QA и operations в быстрых циклах поставки",
+          "Разработка функций и исправление ошибок в модулях бронирования, бухгалтерии и операций",
+          "Вклад в поддержку и развитие live ERP-систем с 1,000+ активных пользователей",
+          "Практический опыт разработки RESTful API и интеграции frontend-backend",
+          "Моделирование данных и оптимизация запросов в средах Docker с PostgreSQL и SQL Server",
         ],
       },
     ],

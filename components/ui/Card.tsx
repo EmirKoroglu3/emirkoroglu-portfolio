@@ -8,6 +8,6 @@ export function Card({
   children: React.ReactNode;
 }) {
   return (
-    <div className={cn("panel rounded-2xl shadow-glow transition-colors", className)}>{children}</div>
+    <div className={cn("panel min-w-0 rounded-2xl shadow-glow transition-colors", className)}>{children}</div>
   );
 }

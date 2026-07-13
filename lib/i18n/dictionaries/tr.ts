@@ -89,7 +89,7 @@ export const tr: Dictionary = {
     ],
     paragraphs: [
       "Antalya merkezli bir Full Stack Geliştiriciyim; şu anda ATG Hospitality'de Junior Yazılım Geliştirici olarak çalışıyorum. Temiz mimari, sürdürülebilirlik ve gerçek iş değeri odaklı web uygulamaları geliştiriyorum.",
-      "Kurumsal yazılım ortamlarındaki deneyimimi C#, .NET, TypeScript, React, Next.js ve Python ile pratik geliştirme becerileriyle birleştiriyorum. İş gereksinimlerini güvenilir ve kullanıcı odaklı dijital ürünlere dönüştürmekten keyif alıyorum.",
+      "Kurumsal yazılım ortamlarındaki deneyimimi C#, .NET, TypeScript, React ve Next.js ile pratik geliştirme becerileriyle birleştiriyorum. İş gereksinimlerini güvenilir ve kullanıcı odaklı dijital ürünlere dönüştürmekten keyif alıyorum.",
       "Akdeniz Üniversitesi'nden (Yönetim Bilişim Sistemleri, 2025) mezun oldum ve üretim ortamındaki çalışmalar ile yapılandırılmış öğrenme sayesinde sürekli gelişiyorum, .NET, Clean Architecture, OWASP güvenli kodlama ve full stack web geliştirme sertifikaları dahil.",
     ],
   },
@@ -114,7 +114,6 @@ export const tr: Dictionary = {
     items: [
       {
         company: "ATG Hospitality",
-        org: "Anex Tour",
         role: "Junior Yazılım Geliştirici",
         location: "Antalya, Türkiye",
         start: "Mayıs 2025",
@@ -128,7 +127,6 @@ export const tr: Dictionary = {
       },
       {
         company: "ATG Hospitality",
-        org: "Anex Tour",
         role: "Yazılım Geliştirici Stajyeri",
         location: "Antalya, Türkiye",
         start: "Şubat 2025",
@@ -180,34 +178,6 @@ export const tr: Dictionary = {
         ],
       },
       {
-        slug: "todo-assistant",
-        title: "Todo Assistant",
-        description:
-          "Python tabanlı bir görev yönetim asistanı, backend mantığı, veri işleme ve günlük verimlilik araçları için pratik full stack desenleri.",
-        stack: ["Python", "Flask", "HTML", "JavaScript"],
-        github: "https://github.com/EmirKoroglu3/todo_assistantt",
-        highlights: [
-          "Backend odaklı Python uygulaması",
-          "Pratik CRUD ve görev yönetimi akışları",
-          "API entegrasyonları için temel altyapı",
-          "Full stack yapılar üzerinde uygulamalı deney",
-        ],
-      },
-      {
-        slug: "portfolio",
-        title: "Geliştirici Portfolyosu",
-        description:
-          "Next.js App Router ile geliştirilmiş premium, üretime hazır portfolyo, SaaS ilhamlı tasarım sistemiyle projeler, deneyim ve GitHub aktivitesini sergiliyor.",
-        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-        github: "https://github.com/EmirKoroglu3",
-        highlights: [
-          "Glassmorphism ve animasyonlu koyu tema tasarım sistemi",
-          "Yükleme ve hata durumlarıyla GitHub API entegrasyonu",
-          "Mobil, tablet ve masaüstünde tam duyarlılık",
-          "SEO, erişilebilirlik ve performans optimizasyonları",
-        ],
-      },
-      {
         slug: "enterprise-operations-platform",
         title: "Enterprise Operations Platform",
         description:
@@ -248,17 +218,17 @@ export const tr: Dictionary = {
       },
       {
         slug: "enterprise-hospitality",
-        title: "Otelcilik ve turizm operasyonları için kurumsal yazılım",
+        title: "Kurumsal ERP sistemlerinde full stack geliştirme",
         problem:
-          "Uluslararası otel ve tur operatörleri; rezervasyon, operasyon, finans ve uyumluluk için kritik sistemlere bağımlıdır. Tek bir hata yüzlerce personelin günlük iş akışını aksatabilir. Bu ortamda yazılım; sıkı güvenlik gereksinimleri, legacy entegrasyonlar ve hızlı iş değişikliklerini dengelemeli ve aynı zamanda teknik olmayan paydaşlar için de anlaşılır kalmalıdır.",
+          "Binlerce kullanıcının günlük işini yürüttüğü kurumsal ERP sistemleri; rezervasyon, muhasebe ve operasyon gibi birbirine bağımlı modüllerden oluşur. Canlı ortamda küçük bir hata bile yüzlerce kullanıcının iş akışını durdurabilir. Bu nedenle yeni özellikler eklenirken mevcut fonksiyonların bozulmaması, veri bütünlüğünün korunması ve performansın sürdürülmesi gerekir.",
         solution:
-          "ATG Hospitality ve Anex Tour'da gerçek operasyonel ortamlarda kullanılan üretim .NET uygulamaları üzerinde çalışıyorum. İş gereksinimlerini sürdürülebilir C# çözümlerine dönüştürüyor, OWASP güvenli kodlama uygulamalarını hayata geçiriyor, SQL Server ve REST servisleriyle entegrasyon kuruyor ve uluslararası ekiplerle birlikte zamanında güvenilir özellikler teslim ediyorum.",
-        technologies: ["C#", ".NET", "SQL Server", "REST APIs", "OWASP"],
+          "1000+ aktif kullanıcıya sahip canlı ERP sistemlerinde hem backend hem frontend tarafında çalışıyorum. Backend'i C#, .NET, ASP.NET Core ve Entity Framework Core ile; frontend'i React, JavaScript, HTML, CSS ve Bootstrap ile geliştiriyorum. REST API'ler geliştirip mevcut servisleri iyileştiriyor, frontend ile backend entegrasyonunu kuruyorum. Docker üzerinde PostgreSQL ve Microsoft SQL Server ile yerel geliştirme ortamları kurup veri modelleme ve sorgu optimizasyonu çalışmalarına katkı sağlıyorum.",
+        technologies: ["C#", ".NET", "ASP.NET Core", "React", "PostgreSQL", "SQL Server"],
         results: [
-          "Kurumsal otelcilik ve turizm sistemlerinde doğrudan üretim deneyimi",
-          "İş süreçleri ile temiz ve güvenli teknik uygulama arasında güçlü bağlantı",
-          "Yaygın web uygulaması güvenlik açıklarını azaltmak için OWASP prensiplerinin uygulanması",
-          "Yoğun teslimat döngülerinde ürün, QA ve operasyon ekipleriyle etkili iş birliği",
+          "Rezervasyon, muhasebe ve operasyon modüllerinde yeni özellik geliştirme ve hata giderme",
+          "1000+ aktif kullanıcılı canlı ERP sistemlerinde bakım ve iyileştirme süreçlerine katkı",
+          "REST API geliştirme ve frontend-backend entegrasyonunda uygulamalı deneyim",
+          "Docker tabanlı PostgreSQL ve SQL Server ortamlarında veri modelleme ve sorgu optimizasyonu",
         ],
       },
     ],
