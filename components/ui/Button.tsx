@@ -2,7 +2,7 @@ import { cn } from "@/lib/cn";
 
 const variantClasses = {
   primary:
-    "border-glass bg-glass-strong text-foreground shadow-soft hover:bg-glass-hover hover:border-glass-strong",
+    "developer-primary",
   secondary:
     "border-glass bg-glass-subtle text-foreground hover:bg-glass-hover hover:border-glass-strong",
   ghost: "bg-transparent text-muted hover:text-foreground hover:bg-glass-subtle",

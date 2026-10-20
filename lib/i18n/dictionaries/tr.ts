@@ -53,17 +53,17 @@ export const tr: Dictionary = {
   },
   hero: {
     badge: "Yeni fırsatlara açığım",
-    viewProjects: "Projeleri Gör",
+    viewProjects: "Projelerimi İncele",
     contactMe: "İletişime Geç",
-    productThinking: "ÜRÜN ODAKLI YAKLAŞIM",
+    productThinking: "KURUMSAL YAZILIM DENEYİMİ",
     productText:
-      "Üretim odaklı, ölçeklenebilir yazılım ürünleri geliştiriyorum. C#, .NET, TypeScript ve React ile temiz mimari ve güvenli kodlamaya odaklanıyorum.",
+      "ATG Hospitality'de rezervasyon, muhasebe ve operasyon süreçlerini destekleyen ERP uygulamalarının backend ve frontend geliştirmesinde çalışıyorum.",
     focus: "Odak",
     focusValue: "Ölçeklenebilir ürünler",
     strength: "Güçlü yön",
     strengthValue: "Problem çözme",
     style: "Stil",
-    styleValue: "Minimal, premium arayüz",
+    styleValue: "Sade, anlaşılır arayüz",
     stack: "Uzmanlık",
     stackValue: "Full Stack",
   },
@@ -77,9 +77,9 @@ export const tr: Dictionary = {
       "Akdeniz Üniversitesi mezunu (Yönetim Bilişim Sistemleri, 2025). Temiz mimari, güvenli kodlama ve gerçek iş problemlerini çözen yazılımlar geliştirmeye önem veriyorum.",
     highlights: [
       "Temiz bileşen mimarisi",
-      "Premium mikro etkileşimler",
-      "Varsayılan olarak duyarlı tasarım",
-      "SEO ve performans odaklılık",
+      "Backend ve frontend entegrasyonu",
+      "Güvenli kodlama",
+      "Sürdürülebilir geliştirme",
     ],
     stats: [
       { label: "Deneyim", value: "2+ yıl" },
@@ -159,9 +159,9 @@ export const tr: Dictionary = {
   },
   projects: {
     eyebrow: "ÖNE ÇIKAN PROJELER",
-    title: "Görsel olarak güçlü. Teknik olarak sağlam.",
+    title: "Geliştirdiğim uygulamalar.",
     description:
-      "Cilalı mikro etkileşimler ve hızlı proje önizleme deneyimi sunan premium bir grid.",
+      "C#/.NET ve React ile geliştirdiğim projeler. Kullandığım teknolojileri, mimari kararları ve kaynak kodlarını inceleyebilirsiniz.",
     items: [
       {
         slug: "fitlog",
@@ -235,8 +235,8 @@ export const tr: Dictionary = {
   },
   github: {
     eyebrow: "GITHUB",
-    title: "Canlı istatistikler, dayanıklı durumlar.",
-    description: "Yükleme, hata yönetimi ve temiz veri eşlemesiyle GitHub API entegrasyonu.",
+    title: "Açık kaynak çalışmalarım.",
+    description: "GitHub profilimdeki depolar ve güncel istatistikler.",
     repositories: "DEPOLAR",
     stars: "YILDIZ",
     followers: "TAKİPÇİ",
@@ -248,9 +248,9 @@ export const tr: Dictionary = {
   },
   contact: {
     eyebrow: "İLETİŞİM",
-    title: "Premium ve sade bir iletişim akışı.",
+    title: "Birlikte çalışalım.",
     description:
-      "Mesaj gönderin veya sosyal bağlantılar üzerinden ulaşın. Uygun durumlar ve erişilebilir etkileşimlerle tasarlandı.",
+      "Yazılım geliştirici pozisyonları ve ekip fırsatları hakkında konuşmak için mesaj gönderebilir veya doğrudan e-posta ile ulaşabilirsiniz.",
     name: "Ad",
     namePlaceholder: "Adınız",
     email: "E-posta",
@@ -267,7 +267,7 @@ export const tr: Dictionary = {
   profile: {
     name: "Emir Köroğlu",
     role: "Full Stack Developer",
-    tagline: "Modern, ölçeklenebilir ve kullanıcı odaklı web uygulamaları geliştiriyorum.",
+    tagline: "C#/.NET ve React ile kurumsal web uygulamaları geliştiriyorum.",
     location: "Antalya, Türkiye",
   },
 };

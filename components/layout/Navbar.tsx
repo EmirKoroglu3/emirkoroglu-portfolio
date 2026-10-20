@@ -9,7 +9,7 @@ import { Container } from "@/components/ui/Container";
 import { CvButtons } from "@/components/ui/CvButtons";
 import { GitHubIcon } from "@/components/icons/GitHubIcon";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
-import { ProfileAvatar } from "@/components/ui/ProfileAvatar";
+
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import type { NavId } from "@/lib/i18n/types";
@@ -17,11 +17,11 @@ import { cn } from "@/lib/cn";
 
 const navIds: NavId[] = [
   "about",
-  "stack",
-  "experience",
-  "certifications",
   "projects",
+  "experience",
   "case-studies",
+  "stack",
+  "certifications",
   "github",
   "contact",
 ];
@@ -73,7 +73,7 @@ export function Navbar() {
         <div className="panel mt-4 rounded-2xl">
           <div className="flex flex-nowrap items-center justify-between gap-3 px-4 py-3 md:gap-4 md:px-5">
             <a href="#top" className="group flex min-w-0 shrink items-center gap-2">
-              <ProfileAvatar size={32} className="h-8 w-8 shrink-0 border border-glass" priority />
+              <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center font-mono text-sm text-[hsl(var(--accent))]">ek<span className="text-faint">/</span></span>
               <div className="hidden min-w-0 leading-tight sm:block">
                 <div className="truncate text-sm font-semibold tracking-tightish text-foreground">
                   {t.profile.name}

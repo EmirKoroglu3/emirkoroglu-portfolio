@@ -54,15 +54,15 @@ export const en: Dictionary = {
     badge: "Open to opportunities",
     viewProjects: "View Projects",
     contactMe: "Contact Me",
-    productThinking: "PRODUCT THINKING",
+    productThinking: "ENTERPRISE SOFTWARE EXPERIENCE",
     productText:
-      "I build production-ready, scalable software products. I ship with C#, .NET, TypeScript, and React, focusing on clean architecture and secure coding.",
+      "At ATG Hospitality, I work on backend and frontend development for ERP applications supporting reservation, accounting, and operations workflows.",
     focus: "Focus",
     focusValue: "Scalable products",
     strength: "Strength",
     strengthValue: "Problem solving",
     style: "Style",
-    styleValue: "Minimal, premium UI",
+    styleValue: "Clear, simple interfaces",
     stack: "Stack",
     stackValue: "Full Stack",
   },
@@ -76,9 +76,9 @@ export const en: Dictionary = {
       "Akdeniz University graduate (Management Information Systems, 2025). I care about clean architecture, secure coding, and building software that solves real business problems.",
     highlights: [
       "Clean component architecture",
-      "Premium micro-interactions",
-      "Responsive by default",
-      "SEO and performance focus",
+      "Backend and frontend integration",
+      "Secure coding",
+      "Maintainable software",
     ],
     stats: [
       { label: "Experience", value: "2+ years" },
@@ -158,9 +158,9 @@ export const en: Dictionary = {
   },
   projects: {
     eyebrow: "FEATURED PROJECTS",
-    title: "Visually strong. Technically grounded.",
+    title: "Applications I build.",
     description:
-      "A premium grid with polished micro-interactions and a fast project preview experience.",
+      "Projects built with C#/.NET and React. Explore the technologies, architecture decisions, and source code behind each application.",
     items: [
       {
         slug: "fitlog",
@@ -234,9 +234,9 @@ export const en: Dictionary = {
   },
   github: {
     eyebrow: "GITHUB",
-    title: "Live stats with resilient states.",
+    title: "My open source work.",
     description:
-      "GitHub API integration with loading, error handling, and a clean data mapping.",
+      "Repositories and up-to-date statistics from my GitHub profile.",
     repositories: "REPOSITORIES",
     stars: "STARS",
     followers: "FOLLOWERS",
@@ -248,9 +248,9 @@ export const en: Dictionary = {
   },
   contact: {
     eyebrow: "CONTACT",
-    title: "A premium, simple contact flow.",
+    title: "Let's work together.",
     description:
-      "Send a message or reach out via social links. Built with proper states and accessible interactions.",
+      "Get in touch about software developer roles and team opportunities using the form or my email address.",
     name: "Name",
     namePlaceholder: "Your name",
     email: "Email",
@@ -267,7 +267,7 @@ export const en: Dictionary = {
   profile: {
     name: "Emir Köroğlu",
     role: "Full Stack Developer",
-    tagline: "Building modern, scalable and user-focused web applications.",
+    tagline: "Building enterprise web applications with C#/.NET and React.",
     location: "Antalya, Turkey",
   },
 };

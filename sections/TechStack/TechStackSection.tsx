@@ -68,8 +68,6 @@ export function TechStackSection() {
                     </div>
                     <div className="text-sm font-semibold tracking-tightish text-foreground">{it.name}</div>
                   </div>
-                  <div className="divider-gradient mt-4 h-px" />
-                  <div className="mt-4 text-xs text-faint">{t.tech.cardHint}</div>
                 </Card>
               </Reveal>
             ))}

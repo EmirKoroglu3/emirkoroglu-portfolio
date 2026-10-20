@@ -105,26 +105,19 @@ export function ProjectsSection() {
           />
         </Reveal>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
+        <div className="project-ledger mt-10">
           {t.projects.items.map((p, idx) => (
             <Reveal key={p.slug} delay={0.04 + idx * 0.02}>
-              <Card className="group relative cursor-pointer overflow-hidden p-6 hover:border-glass-strong hover:bg-glass-hover">
-                <div
-                  className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                  style={{
-                    background:
-                      "radial-gradient(800px 400px at 20% 10%, rgba(59,130,246,0.14), transparent 55%), radial-gradient(700px 420px at 80% 30%, rgba(124,58,237,0.12), transparent 50%)",
-                  }}
-                />
+              <Card className="project-record group relative overflow-hidden">
                 <button
-                  className="relative text-left"
+                  className="project-record-button relative text-left"
                   type="button"
                   onClick={() => setActive(p)}
                   aria-label={`${t.common.openProject} ${p.title}`}
                 >
-                  <div className="flex items-start justify-between gap-4">
+                  <div className="project-record-main flex items-start justify-between gap-4">
                     <div>
-                      <div className="text-lg font-semibold tracking-tightish text-foreground">{p.title}</div>
+                      <div className="project-file-index"><span>{String(idx + 1).padStart(2, "0")}</span><small>PROJECT / {p.slug}</small></div><div className="project-record-title">{p.title}</div>
                       <div className="mt-2 text-sm text-muted">{p.description}</div>
                     </div>
                     <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl border-glass bg-glass-subtle text-muted transition-colors group-hover:text-foreground">

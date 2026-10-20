@@ -13,11 +13,11 @@ import type { NavId } from "@/lib/i18n/types";
 
 const navIds: NavId[] = [
   "about",
-  "stack",
-  "experience",
-  "certifications",
   "projects",
+  "experience",
   "case-studies",
+  "stack",
+  "certifications",
   "github",
   "contact",
 ];

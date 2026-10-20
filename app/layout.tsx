@@ -10,7 +10,7 @@ import { getServerLocale } from "@/lib/i18n/server";
 import { THEME_STORAGE_KEY } from "@/lib/i18n/constants";
 import { buildSiteMetadata } from "@/lib/seo/build-metadata";
 
-import "./globals.css";
+import "./studio.css";
 
 const sans = Inter({
   subsets: ["latin"],
@@ -39,7 +39,7 @@ export const viewport: Viewport = {
   colorScheme: "dark light",
 };
 
-const themeInitScript = `(function(){try{var t=localStorage.getItem("${THEME_STORAGE_KEY}");document.documentElement.classList.remove("light","dark");document.documentElement.classList.add(t==="dark"?"dark":"light")}catch(e){document.documentElement.classList.add("light")}})();`;
+const themeInitScript = `(function(){try{var t=localStorage.getItem("${THEME_STORAGE_KEY}");document.documentElement.classList.remove("light","dark");document.documentElement.classList.add(t==="light"?"light":"dark")}catch(e){document.documentElement.classList.add("dark")}})();`;
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getServerLocale();
