@@ -2,11 +2,15 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
+import { getDictionary, isLocale } from "@/lib/i18n";
+
 export const alt = "Emir Köroğlu | Full Stack Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default async function Image() {
+export default async function Image({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = getDictionary(isLocale(locale) ? locale : "en");
   const profileBuffer = await readFile(join(process.cwd(), "public/images/profile.png"));
   const profileSrc = `data:image/png;base64,${profileBuffer.toString("base64")}`;
 
@@ -53,7 +57,7 @@ export default async function Image() {
           </div>
           <div style={{ fontSize: 34, color: "#cbd5e1" }}>Full Stack Developer</div>
           <div style={{ fontSize: 26, lineHeight: 1.45, color: "#94a3b8" }}>
-            Modern, scalable and user-focused web applications.
+            {t.profile.tagline}
           </div>
         </div>
       </div>

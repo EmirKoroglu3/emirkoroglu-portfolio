@@ -1,14 +1,15 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 
+// Opacity + a short rise only. A blur filter on whole sections is costly to paint and
+// left content smeared for a moment when jumping to a section from the menu.
 const variants: Variants = {
-  hidden: { opacity: 0, y: 18, filter: "blur(10px)" },
+  hidden: { opacity: 0, y: 14 },
   show: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
-    transition: { duration: 0.7, ease: [0.2, 0.8, 0.2, 1] },
+    transition: { duration: 0.5, ease: [0.2, 0.8, 0.2, 1] },
   },
 };
 
@@ -21,12 +22,15 @@ export function Reveal({
   delay?: number;
   className?: string;
 }) {
+  const reduceMotion = useReducedMotion();
+  if (reduceMotion) return <div className={className}>{children}</div>;
+
   return (
     <motion.div
       className={className}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+      viewport={{ once: true, margin: "0px 0px -8% 0px" }}
       variants={variants}
       transition={{ delay }}
     >
@@ -34,4 +38,3 @@ export function Reveal({
     </motion.div>
   );
 }
-

@@ -7,7 +7,6 @@ export type NavId =
   | "experience"
   | "certifications"
   | "projects"
-  | "case-studies"
   | "github"
   | "contact";
 
@@ -33,6 +32,8 @@ export type ExperienceItem = {
 
 export type CaseStudyItem = {
   slug: string;
+  /** Slug of the project this deep-dive belongs to. */
+  project: string;
   title: string;
   problem: string;
   solution: string;
@@ -70,6 +71,9 @@ export type Dictionary = {
     themeLight: string;
     themeDark: string;
     language: string;
+    notFoundTitle: string;
+    notFoundText: string;
+    backHome: string;
   };
   nav: Record<NavId, string>;
   hero: {
@@ -121,12 +125,16 @@ export type Dictionary = {
     eyebrow: string;
     title: string;
     description: string;
+    viewDetails: string;
+    backToProjects: string;
+    highlights: string;
+    results: string;
+    techStack: string;
+    sourceCode: string;
     items: ProjectItem[];
   };
+  /** Deep-dive content shown on a project's detail page (matched by `project`). */
   caseStudies: {
-    eyebrow: string;
-    title: string;
-    description: string;
     problem: string;
     solution: string;
     items: CaseStudyItem[];
@@ -137,12 +145,11 @@ export type Dictionary = {
     description: string;
     repositories: string;
     stars: string;
-    followers: string;
-    following: string;
-    topLanguages: string;
+    updated: string;
+    viewProfile: string;
+    noDescription: string;
     errorTitle: string;
     errorHint: string;
-    languages: string[];
   };
   contact: {
     eyebrow: string;

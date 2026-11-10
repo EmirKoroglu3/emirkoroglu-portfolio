@@ -1,21 +1,14 @@
 "use client";
 
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
-import { useRouter } from "next/navigation";
+import { createContext, useCallback, useContext, useMemo } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 import {
   LOCALE_COOKIE_KEY,
   LOCALE_COOKIE_MAX_AGE,
   LOCALE_STORAGE_KEY,
 } from "@/lib/i18n/constants";
-import { getDictionary, isLocale, type Locale } from "@/lib/i18n";
+import { getDictionary, swapLocale, type Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/lib/i18n/types";
 
 type I18nContextValue = {
@@ -26,66 +19,32 @@ type I18nContextValue = {
 
 const I18nContext = createContext<I18nContextValue | null>(null);
 
+/** Remembered so that `/` sends returning visitors to the language they picked. */
 function persistLocale(locale: Locale) {
-  localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+  try {
+    localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+  } catch {
+    // storage can be unavailable (private mode); the cookie is enough
+  }
   document.cookie = `${LOCALE_COOKIE_KEY}=${locale};path=/;max-age=${LOCALE_COOKIE_MAX_AGE};SameSite=Lax`;
 }
 
-function readBrowserLocale(): Locale {
-  const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
-  if (stored && isLocale(stored)) return stored;
-
-  const cookieMatch = document.cookie.match(new RegExp(`${LOCALE_COOKIE_KEY}=([^;]+)`));
-  if (cookieMatch?.[1] && isLocale(cookieMatch[1])) return cookieMatch[1];
-
-  const browser = navigator.language.slice(0, 2);
-  if (isLocale(browser)) return browser;
-
-  return "en";
-}
-
-export function I18nProvider({
-  children,
-  initialLocale,
-}: {
-  children: React.ReactNode;
-  initialLocale: Locale;
-}) {
+/** The locale comes from the URL (`/[locale]/…`); switching languages navigates to the same page in that language. */
+export function I18nProvider({ children, locale }: { children: React.ReactNode; locale: Locale }) {
   const router = useRouter();
-  const [locale, setLocaleState] = useState<Locale>(initialLocale);
-
-  useEffect(() => {
-    const detected = readBrowserLocale();
-    if (detected !== initialLocale) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setLocaleState(detected);
-      persistLocale(detected);
-      router.refresh();
-      return;
-    }
-    persistLocale(detected);
-  }, [initialLocale, router]);
+  const pathname = usePathname();
 
   const setLocale = useCallback(
     (next: Locale) => {
-      setLocaleState(next);
+      if (next === locale) return;
       persistLocale(next);
-      document.documentElement.lang = getDictionary(next).meta.htmlLang;
-      router.refresh();
+      router.push(`${swapLocale(pathname, next)}${window.location.hash}`, { scroll: false });
     },
-    [router],
+    [locale, pathname, router],
   );
 
-  useEffect(() => {
-    document.documentElement.lang = getDictionary(locale).meta.htmlLang;
-  }, [locale]);
-
   const value = useMemo<I18nContextValue>(
-    () => ({
-      locale,
-      setLocale,
-      t: getDictionary(locale),
-    }),
+    () => ({ locale, setLocale, t: getDictionary(locale) }),
     [locale, setLocale],
   );
 

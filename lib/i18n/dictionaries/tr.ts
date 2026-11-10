@@ -40,6 +40,9 @@ export const tr: Dictionary = {
     themeLight: "Açık tema",
     themeDark: "Koyu tema",
     language: "Dil",
+    notFoundTitle: "Sayfa bulunamadı",
+    notFoundText: "Aradığınız sayfa mevcut değil ya da taşınmış.",
+    backHome: "Ana sayfaya dön",
   },
   nav: {
     about: "Hakkımda",
@@ -47,7 +50,6 @@ export const tr: Dictionary = {
     experience: "Deneyim",
     certifications: "Sertifikalar",
     projects: "Projeler",
-    "case-studies": "İncelemeler",
     github: "GitHub",
     contact: "İletişim",
   },
@@ -97,7 +99,7 @@ export const tr: Dictionary = {
     eyebrow: "TEKNOLOJİ YIĞINI",
     title: "Modern araçlar, temiz uygulama.",
     description:
-      "Ölçeklenebilir ve üretime hazır web uygulamaları geliştirmek için kullandığım teknolojilerin interaktif bir özeti.",
+      "Ölçeklenebilir ve üretime hazır web uygulamaları geliştirmek için kullandığım teknolojiler.",
     tabs: {
       frontend: "Frontend",
       backend: "Backend",
@@ -114,28 +116,30 @@ export const tr: Dictionary = {
     items: [
       {
         company: "ATG Hospitality",
+        org: "Anex Tour",
         role: "Junior Yazılım Geliştirici",
         location: "Antalya, Türkiye",
         start: "Mayıs 2025",
         end: "Devam ediyor",
         bullets: [
-          "Kurumsal ERP uygulamalarının Backend (C#, .NET, ASP.NET Core, Entity Framework Core) ve frontend (React, JavaScript, HTML, CSS, Bootstrap) geliştirme, bakım ve iyileştirme süreçlerinde görev aldı",
-          "REST API'lerin geliştirilmesi, mevcut servislerin iyileştirilmesi ve frontend ile backend entegrasyon süreçlerinde görev aldı",
-          "Docker konteynerleri üzerinde PostgreSQL ve Microsoft SQL Server kullanarak yerel geliştirme ortamları oluşturdu; veri modelleme ve sorgu optimizasyonu çalışmalarına katkı sağladı",
-          "Rezervasyon, muhasebe ve operasyon modüllerinde yeni özellik geliştirme, mevcut fonksiyonların iyileştirilmesi ve hata giderme; 1000+ aktif kullanıcıya sahip canlı ERP sistemlerinde bakım süreçlerine katkı sağladı",
+          "Kurumsal ERP uygulamalarının backend (C#, .NET, ASP.NET Core, Entity Framework Core) ve frontend (React, JavaScript, HTML, CSS, Bootstrap) tarafında geliştirme, bakım ve iyileştirme yapıyorum",
+          "REST API'ler geliştiriyor, mevcut servisleri iyileştiriyor ve frontend ile backend entegrasyonunu kuruyorum",
+          "Docker üzerinde PostgreSQL ve Microsoft SQL Server ile yerel geliştirme ortamları kuruyor; veri modelleme ve sorgu optimizasyonuna katkı sağlıyorum",
+          "Rezervasyon, muhasebe ve operasyon modüllerinde yeni özellikler geliştiriyor ve hataları gideriyorum; 1000+ aktif kullanıcılı canlı ERP sistemlerinin bakımına katkı sağlıyorum",
         ],
       },
       {
         company: "ATG Hospitality",
+        org: "Anex Tour",
         role: "Yazılım Geliştirici Stajyeri",
         location: "Antalya, Türkiye",
         start: "Şubat 2025",
         end: "Mayıs 2025",
         bullets: [
-          "Kurumsal ekipler içinde .NET ve full stack geliştirmede uygulamalı deneyim",
-          "Dahili araçlara ve uygulama destek süreçlerine katkı",
-          "Kod incelemeleri, sorun giderme ve iş süreci analizine katılım",
-          "Ölçeklenebilir backend ve frontend geliştirmede temel beceriler",
+          "Kurumsal ekipler içinde .NET ve full stack geliştirmede uygulamalı deneyim kazandım",
+          "Dahili araçlara ve uygulama destek süreçlerine katkı sağladım",
+          "Kod incelemelerine, sorun giderme ve iş süreci analizine katıldım",
+          "Ölçeklenebilir backend ve frontend geliştirmede temel becerilerimi oluşturdum",
         ],
       },
     ],
@@ -162,6 +166,12 @@ export const tr: Dictionary = {
     title: "Geliştirdiğim uygulamalar.",
     description:
       "C#/.NET ve React ile geliştirdiğim projeler. Kullandığım teknolojileri, mimari kararları ve kaynak kodlarını inceleyebilirsiniz.",
+    viewDetails: "Detayları gör",
+    backToProjects: "Tüm projeler",
+    highlights: "Öne çıkanlar",
+    results: "Sonuçlar",
+    techStack: "Teknolojiler",
+    sourceCode: "Kaynak kod",
     items: [
       {
         slug: "fitlog",
@@ -194,15 +204,12 @@ export const tr: Dictionary = {
     ],
   },
   caseStudies: {
-    eyebrow: "PROJE İNCELEMELERİ",
-    title: "Karmaşık ürün problemlerine nasıl yaklaşıyorum.",
-    description:
-      "Mimari kararlar, kurumsal kısıtlar ve ölçülebilir sonuçlara odaklanan seçilmiş derinlemesine incelemeler, sıradan bir proje listesinin ötesinde.",
     problem: "PROBLEM",
     solution: "ÇÖZÜM",
     items: [
       {
         slug: "fitlog-clean-architecture",
+        project: "fitlog",
         title: "FitLog: Clean Architecture ile sürdürülebilir bir fitness platformu",
         problem:
           "Fitness uygulamaları genellikle birkaç ekranla başlar ve organik olarak büyür. Zamanla antrenman mantığı arayüz bileşenlerinin içine girer, veritabanı sorguları controller katmanına sızar ve her yeni özellik çıkarmak zorlaşır. Bu maliyet ilk gün görünmez, ürün büyüdükçe, ekip büyüdükçe ve regresyonlar arttıkça katlanarak artar.",
@@ -217,18 +224,19 @@ export const tr: Dictionary = {
         ],
       },
       {
-        slug: "enterprise-hospitality",
-        title: "Kurumsal ERP sistemlerinde full stack geliştirme",
+        slug: "enterprise-operations-platform-case",
+        project: "enterprise-operations-platform",
+        title: "Enterprise Operations Platform: toplantı, karar ve iş akışları için çok kiracılı tek bir platform",
         problem:
-          "Binlerce kullanıcının günlük işini yürüttüğü kurumsal ERP sistemleri; rezervasyon, muhasebe ve operasyon gibi birbirine bağımlı modüllerden oluşur. Canlı ortamda küçük bir hata bile yüzlerce kullanıcının iş akışını durdurabilir. Bu nedenle yeni özellikler eklenirken mevcut fonksiyonların bozulmaması, veri bütünlüğünün korunması ve performansın sürdürülmesi gerekir.",
+          "Kurumlar toplantıları, kararları, görevleri ve dokümanları çoğu zaman ayrı araçlarda yürütür. Toplantıda çıkan aksiyonlar görev takibine geçerken kaybolur, kararların onay izi tutulmaz ve operasyonun tamamını tek yerden gören kimse olmaz. Bunları bir araya getiren bir platformun aynı anda birçok kurumu (multi-tenant) taşıması, her kurumun verisini izole tutması, ayrıntılı yetkileri uygulaması ve denetim kaydı bırakması gerekir; üstelik modül sayısı arttıkça kod tabanı dağılmamalıdır.",
         solution:
-          "1000+ aktif kullanıcıya sahip canlı ERP sistemlerinde hem backend hem frontend tarafında çalışıyorum. Backend'i C#, .NET, ASP.NET Core ve Entity Framework Core ile; frontend'i React, JavaScript, HTML, CSS ve Bootstrap ile geliştiriyorum. REST API'ler geliştirip mevcut servisleri iyileştiriyor, frontend ile backend entegrasyonunu kuruyorum. Docker üzerinde PostgreSQL ve Microsoft SQL Server ile yerel geliştirme ortamları kurup veri modelleme ve sorgu optimizasyonu çalışmalarına katkı sağlıyorum.",
-        technologies: ["C#", ".NET", "ASP.NET Core", "React", "PostgreSQL", "SQL Server"],
+          "EOP'yi Clean Architecture üzerine dört katmanla kurdum: Api, Application, Domain ve Infrastructure; bunlara ek olarak ortak yapı taşları. Her use case, MediatR üzerinden çalışan bir CQRS command ya da query; loglama, doğrulama (FluentValidation) ve hata yönetimi pipeline behavior'larla tek bir yerde ele alınıyor. Multi-tenancy, tenant context middleware'i ve EF Core query filter'larıyla sağlanıyor; yetki tabanlı erişim API'de uygulanıyor ve Next.js/React arayüzüne de yansıyor. Veriler PostgreSQL'de, önbellek Redis'te tutuluyor; anlık bildirimler SignalR ile, arka plan işleri Hangfire ile çalışıyor ve Microsoft Graph entegrasyonu Teams, Outlook, SharePoint ve OneDrive'ı bağlıyor.",
+        technologies: ["ASP.NET Core", "PostgreSQL", "Redis", "SignalR", "Hangfire", "Next.js", "React", "TypeScript"],
         results: [
-          "Rezervasyon, muhasebe ve operasyon modüllerinde yeni özellik geliştirme ve hata giderme",
-          "1000+ aktif kullanıcılı canlı ERP sistemlerinde bakım ve iyileştirme süreçlerine katkı",
-          "REST API geliştirme ve frontend-backend entegrasyonunda uygulamalı deneyim",
-          "Docker tabanlı PostgreSQL ve SQL Server ortamlarında veri modelleme ve sorgu optimizasyonu",
+          "Toplantı, karar, görev, doküman, iş akışı, bildirim, analitik, arama, Microsoft 365, arka plan işleri ve yönetim: ortak kimlik ve yetki altyapısını paylaşan tek API üzerinde 11 modül",
+          "Loglama, doğrulama ve hata yönetimi her endpoint'te ayrı ayrı değil, MediatR pipeline'ında tek seferde ele alınıyor",
+          "Kiracı verileri middleware ve query filter'larla izole; yetkiler API'de uygulanıyor ve arayüze yansıyor",
+          "xUnit ve Playwright testleriyle kapsanıyor, Docker Compose ile paketleniyor ve GitHub Actions ile derleniyor",
         ],
       },
     ],
@@ -236,15 +244,14 @@ export const tr: Dictionary = {
   github: {
     eyebrow: "GITHUB",
     title: "Açık kaynak çalışmalarım.",
-    description: "GitHub profilimdeki depolar ve güncel istatistikler.",
-    repositories: "DEPOLAR",
+    description: "GitHub profilimdeki herkese açık repolar, GitHub API'den canlı olarak.",
+    repositories: "REPO",
     stars: "YILDIZ",
-    followers: "TAKİPÇİ",
-    following: "TAKİP",
-    topLanguages: "ÖNE ÇIKAN DİLLER",
+    updated: "Güncellendi",
+    viewProfile: "GitHub profilini gör",
+    noDescription: "Açıklama yok",
     errorTitle: "GitHub verisi alınamadı",
-    errorHint: "Ortam değişkenlerinde GITHUB_USERNAME ayarlayabilirsiniz.",
-    languages: ["C#", ".NET", "React"],
+    errorHint: "Repolarımı doğrudan GitHub üzerinden inceleyebilirsiniz.",
   },
   contact: {
     eyebrow: "İLETİŞİM",

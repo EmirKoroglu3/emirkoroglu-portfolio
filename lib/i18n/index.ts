@@ -22,7 +22,4 @@ export const localeLabels: Record<Locale, string> = {
 };
 
 export { LOCALE_COOKIE_KEY, LOCALE_COOKIE_MAX_AGE, LOCALE_STORAGE_KEY, THEME_STORAGE_KEY } from "./constants";
-
-export function isLocale(value: string): value is Locale {
-  return value === "en" || value === "tr" || value === "de" || value === "ru";
-}
+export { defaultLocale, isLocale, localePath, sectionHref, swapLocale } from "./routing";

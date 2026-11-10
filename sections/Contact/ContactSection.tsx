@@ -1,14 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ArrowUpRight, Mail, Send } from "lucide-react";
+import { ArrowUpRight, Send } from "lucide-react";
 
 import { profile } from "@/data/profile";
 
-import { GitHubIcon } from "@/components/icons/GitHubIcon";
 import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useI18n } from "@/lib/i18n/I18nProvider";
@@ -23,24 +21,9 @@ export function ContactSection() {
 
   const social = useMemo(
     () => [
-      {
-        label: t.common.email,
-        href: profile.links.email,
-        display: profile.links.emailDisplay,
-        icon: Mail,
-      },
-      {
-        label: t.common.github,
-        href: profile.links.github,
-        display: "EmirKoroglu3",
-        icon: GitHubIcon,
-      },
-      {
-        label: t.common.linkedin,
-        href: profile.links.linkedin,
-        display: profile.links.linkedin,
-        icon: ArrowUpRight,
-      },
+      { label: t.common.email, href: profile.links.email, display: profile.links.emailDisplay, external: false },
+      { label: t.common.github, href: profile.links.github, display: "github.com/EmirKoroglu3", external: true },
+      { label: t.common.linkedin, href: profile.links.linkedin, display: "in/emir-koroglu", external: true },
     ],
     [t],
   );
@@ -89,116 +72,102 @@ export function ContactSection() {
       <Container>
         <Reveal>
           <SectionHeader
+            index="07"
             eyebrow={t.contact.eyebrow}
+            file="contact.ts"
             title={t.contact.title}
             description={t.contact.description}
           />
         </Reveal>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-12">
+        <div className="mt-8 grid gap-8 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-7">
-            <Card className="p-6 md:p-8">
-              <form className="grid gap-4" onSubmit={onSubmit}>
-                <div
-                  className="absolute -left-[9999px] h-px w-px overflow-hidden opacity-0"
-                  aria-hidden="true"
-                >
-                  <label>
-                    Website
-                    <input
-                      type="text"
-                      name={HONEYPOT_FIELD}
-                      tabIndex={-1}
-                      autoComplete="off"
-                    />
-                  </label>
-                </div>
+            <form className="panel grid gap-5 p-6 md:p-8" onSubmit={onSubmit}>
+              <div className="absolute -left-[9999px] h-px w-px overflow-hidden opacity-0" aria-hidden="true">
+                <label>
+                  Website
+                  <input type="text" name={HONEYPOT_FIELD} tabIndex={-1} autoComplete="off" />
+                </label>
+              </div>
 
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <label className="grid gap-2 text-sm text-muted">
-                    {t.contact.name}
-                    <input
-                      name="name"
-                      required
-                      maxLength={CONTACT_LIMITS.name}
-                      className="h-11 rounded-2xl border-glass bg-glass-subtle px-4 text-foreground placeholder:text-faint focus:border-glass-strong focus:outline-none"
-                      placeholder={t.contact.namePlaceholder}
-                    />
-                  </label>
-                  <label className="grid gap-2 text-sm text-muted">
-                    {t.contact.email}
-                    <input
-                      name="email"
-                      type="email"
-                      required
-                      maxLength={CONTACT_LIMITS.email}
-                      className="h-11 rounded-2xl border-glass bg-glass-subtle px-4 text-foreground placeholder:text-faint focus:border-glass-strong focus:outline-none"
-                      placeholder={t.contact.emailPlaceholder}
-                    />
-                  </label>
-                </div>
-
-                <label className="grid gap-2 text-sm text-muted">
-                  {t.contact.subject}
+              <div className="grid gap-5 sm:grid-cols-2">
+                <label className="field">
+                  <span>{t.contact.name}</span>
                   <input
-                    name="subject"
+                    name="name"
                     required
-                    maxLength={CONTACT_LIMITS.subject}
-                    className="h-11 rounded-2xl border-glass bg-glass-subtle px-4 text-foreground placeholder:text-faint focus:border-glass-strong focus:outline-none"
-                    placeholder={t.contact.subjectPlaceholder}
+                    maxLength={CONTACT_LIMITS.name}
+                    autoComplete="name"
+                    placeholder={t.contact.namePlaceholder}
                   />
                 </label>
-
-                <label className="grid gap-2 text-sm text-muted">
-                  {t.contact.message}
-                  <textarea
-                    name="message"
+                <label className="field">
+                  <span>{t.contact.email}</span>
+                  <input
+                    name="email"
+                    type="email"
                     required
-                    rows={5}
-                    maxLength={CONTACT_LIMITS.message}
-                    className="rounded-2xl border-glass bg-glass-subtle px-4 py-3 text-foreground placeholder:text-faint focus:border-glass-strong focus:outline-none"
-                    placeholder={t.contact.messagePlaceholder}
+                    maxLength={CONTACT_LIMITS.email}
+                    autoComplete="email"
+                    placeholder={t.contact.emailPlaceholder}
                   />
                 </label>
+              </div>
 
-                <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  <div className="text-sm text-muted" aria-live="polite">
-                    {state === "success" ? t.common.successMessage : null}
-                    {state === "error" ? error : null}
-                  </div>
-                  <Button type="submit" variant="primary" size="lg" aria-label={t.contact.sendAria}>
-                    <Send className="h-4 w-4" aria-hidden />
-                    {state === "submitting" ? t.common.sending : t.common.send}
-                  </Button>
+              <label className="field">
+                <span>{t.contact.subject}</span>
+                <input
+                  name="subject"
+                  required
+                  maxLength={CONTACT_LIMITS.subject}
+                  placeholder={t.contact.subjectPlaceholder}
+                />
+              </label>
+
+              <label className="field">
+                <span>{t.contact.message}</span>
+                <textarea
+                  name="message"
+                  required
+                  rows={4}
+                  maxLength={CONTACT_LIMITS.message}
+                  placeholder={t.contact.messagePlaceholder}
+                />
+              </label>
+
+              <div className="mt-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div className="text-sm text-muted" aria-live="polite">
+                  {state === "success" ? t.common.successMessage : null}
+                  {state === "error" ? error : null}
                 </div>
-              </form>
-            </Card>
+                <Button type="submit" variant="primary" size="lg" aria-label={t.contact.sendAria}>
+                  <Send className="h-4 w-4" aria-hidden />
+                  {state === "submitting" ? t.common.sending : t.common.send}
+                </Button>
+              </div>
+            </form>
           </Reveal>
 
           <Reveal className="lg:col-span-5" delay={0.05}>
-            <div className="grid gap-4">
+            <ul className="border-t border-[hsl(var(--border))]">
               {social.map((s) => (
-                <Card key={s.label} className="p-6 hover:border-glass-strong hover:bg-glass-hover">
+                <li key={s.label} className="ledger-row">
                   <a
                     href={s.href}
-                    className="flex items-center justify-between gap-4"
-                    {...(s.label !== t.common.email
-                      ? { target: "_blank", rel: "noreferrer" }
-                      : {})}
+                    className="contact-link group"
+                    {...(s.external ? { target: "_blank", rel: "noreferrer" } : {})}
                   >
-                    <div className="min-w-0">
-                      <div className="text-xs font-medium tracking-[0.2em] text-faint">
-                        {s.label.toUpperCase()}
-                      </div>
-                      <div className="mt-2 truncate text-sm text-muted">{s.display}</div>
-                    </div>
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border-glass bg-glass-subtle text-muted">
-                      <s.icon className="h-5 w-5" />
-                    </div>
+                    <span className="min-w-0">
+                      <span className="mono-label block">{s.label}</span>
+                      <span className="ledger-title mt-2 block truncate text-[15px] group-hover:text-[hsl(var(--accent))]">
+                        {s.display}
+                      </span>
+                    </span>
+                    <ArrowUpRight className="ledger-arrow h-5 w-5" aria-hidden />
                   </a>
-                </Card>
+                </li>
               ))}
-            </div>
+            </ul>
           </Reveal>
         </div>
       </Container>

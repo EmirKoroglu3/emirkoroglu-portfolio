@@ -1,9 +1,6 @@
 "use client";
 
-import { BriefcaseBusiness, MapPin } from "lucide-react";
-
 import { Reveal } from "@/components/motion/Reveal";
-import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useI18n } from "@/lib/i18n/I18nProvider";
@@ -16,59 +13,40 @@ export function ExperienceSection() {
       <Container>
         <Reveal>
           <SectionHeader
+            index="03"
             eyebrow={t.experience.eyebrow}
+            file="experience.log"
             title={t.experience.title}
             description={t.experience.description}
           />
         </Reveal>
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-2">
+        <ol className="ledger">
           {t.experience.items.map((item, idx) => (
-            <Reveal key={`${item.company}-${item.role}`} delay={0.05 + idx * 0.05}>
-              <Card className="flex h-full flex-col p-6 md:p-7 hover:border-glass-strong hover:bg-glass-hover">
-                <div className="flex flex-col-reverse items-start gap-3 sm:flex-row sm:justify-between sm:gap-4">
-                  <div className="flex min-w-0 items-start gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border-glass bg-glass-subtle text-muted">
-                      <BriefcaseBusiness className="h-5 w-5" />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-lg font-semibold tracking-tightish text-foreground">
-                        {item.role}
-                      </div>
-                      <div className="mt-1 text-sm text-muted">
-                        {item.company}
-                        {item.org ? (
-                          <>
-                            {" "}
-                            <span className="text-faint">/</span> {item.org}
-                          </>
-                        ) : null}
-                      </div>
-                      <div className="mt-2 inline-flex items-center gap-1 text-xs text-faint">
-                        <MapPin className="h-3.5 w-3.5 shrink-0" aria-hidden />
-                        {item.location}
-                      </div>
-                    </div>
+            <li key={`${item.company}-${item.role}`} className="ledger-row">
+              <Reveal delay={0.04 + idx * 0.04} className="exp-row">
+                <div className="font-mono">
+                  <div className="ledger-index">
+                    {item.start} — {item.end}
                   </div>
-                  <div className="shrink-0 rounded-full border-glass bg-glass-subtle px-3 py-1.5 text-xs text-muted">
-                    {item.start} - {item.end}
+                  <div className="ledger-meta mt-2">{item.location}</div>
+                </div>
+                <div className="min-w-0">
+                  <h3 className="exp-role">{item.role}</h3>
+                  <div className="mt-2 font-mono text-xs text-muted">
+                    {item.company}
+                    {item.org ? <span className="text-faint"> / {item.org}</span> : null}
                   </div>
+                  <ul className="dash-list mt-5">
+                    {item.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
                 </div>
-
-                <div className="mt-6 grid gap-2">
-                  {item.bullets.map((bullet) => (
-                    <div
-                      key={bullet}
-                      className="rounded-2xl border-glass bg-glass-subtle px-4 py-3 text-sm text-muted"
-                    >
-                      {bullet}
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            </Reveal>
+              </Reveal>
+            </li>
           ))}
-        </div>
+        </ol>
       </Container>
     </section>
   );

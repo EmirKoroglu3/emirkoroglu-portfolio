@@ -1,11 +1,11 @@
 "use client";
 
-import { ArrowUpRight, Award } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { useMemo } from "react";
 
 import { certificationRecords } from "@/data/certifications";
 
 import { Reveal } from "@/components/motion/Reveal";
-import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useI18n } from "@/lib/i18n/I18nProvider";
@@ -13,51 +13,55 @@ import { useI18n } from "@/lib/i18n/I18nProvider";
 export function CertificationsSection() {
   const { t } = useI18n();
 
+  // "2025-11" → "Kas 2025" / "Nov 2025" / "Nov. 2025" / "нояб. 2025"
+  const formatIssued = useMemo(() => {
+    const fmt = new Intl.DateTimeFormat(t.meta.htmlLang, { month: "short", year: "numeric", timeZone: "UTC" });
+    return (ym: string) => {
+      const [y, m] = ym.split("-").map(Number);
+      return fmt.format(new Date(Date.UTC(y, m - 1, 1)));
+    };
+  }, [t.meta.htmlLang]);
+
   return (
     <section id="certifications" className="py-[var(--space-section-y)]">
       <Container>
         <Reveal>
           <SectionHeader
+            index="05"
             eyebrow={t.certifications.eyebrow}
+            file="certificates.yml"
             title={t.certifications.title}
             description={t.certifications.description}
           />
         </Reveal>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <ul className="ledger cert-list">
           {certificationRecords.map((record, idx) => {
             const item = t.certifications.items.find((entry) => entry.slug === record.slug);
             if (!item) return null;
 
             return (
-              <Reveal key={record.slug} delay={0.04 + idx * 0.03}>
-                <Card className="flex h-full flex-col p-5 hover:border-glass-strong hover:bg-glass-hover">
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border-glass bg-glass-subtle text-muted">
-                      <Award className="h-5 w-5" />
-                    </div>
-                    <span className="text-xs text-faint">{record.issued}</span>
-                  </div>
-
-                  <h3 className="mt-4 text-sm font-semibold leading-snug tracking-tightish text-foreground">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-xs text-muted">{record.issuer}</p>
-
+              <li key={record.slug}>
+                <Reveal delay={0.02 + idx * 0.02}>
                   <a
                     href={record.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-auto inline-flex items-center gap-1.5 pt-5 text-xs font-medium text-muted transition-colors hover:text-foreground"
+                    className="ledger-row cert-row"
+                    aria-label={`${item.title} — ${t.certifications.viewCertificate}`}
                   >
-                    {t.certifications.viewCertificate}
-                    <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+                    <span className="col-span-2 font-mono text-[10px] tracking-[0.08em]">
+                      <span className="text-[hsl(var(--accent))]">{formatIssued(record.issued)}</span>
+                      <span className="text-faint"> · {record.issuer}</span>
+                    </span>
+                    <span className="ledger-title text-[15px] leading-snug">{item.title}</span>
+                    <ArrowUpRight className="ledger-arrow h-4 w-4 justify-self-end" aria-hidden />
                   </a>
-                </Card>
-              </Reveal>
+                </Reveal>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </Container>
     </section>
   );

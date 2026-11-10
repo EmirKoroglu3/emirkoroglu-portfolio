@@ -39,6 +39,9 @@ export const ru: Dictionary = {
     themeLight: "Светлая тема",
     themeDark: "Тёмная тема",
     language: "Язык",
+    notFoundTitle: "Страница не найдена",
+    notFoundText: "Такой страницы нет или она была перемещена.",
+    backHome: "На главную",
   },
   nav: {
     about: "Обо мне",
@@ -46,7 +49,6 @@ export const ru: Dictionary = {
     experience: "Опыт",
     certifications: "Сертификаты",
     projects: "Проекты",
-    "case-studies": "Кейсы",
     github: "GitHub",
     contact: "Контакты",
   },
@@ -76,9 +78,9 @@ export const ru: Dictionary = {
       "Выпускник Университета Акдениз (Информационные системы в управлении, 2025). Для меня важны чистая архитектура, безопасный код и ПО, решающее реальные бизнес-задачи.",
     highlights: [
       "Чистая компонентная архитектура",
-      "Премиальные микроинтеракции",
-      "Адаптивность по умолчанию",
-      "Фокус на SEO и производительности",
+      "Интеграция backend и frontend",
+      "Безопасный код",
+      "Поддерживаемое ПО",
     ],
     stats: [
       { label: "Опыт", value: "2+ года" },
@@ -96,7 +98,7 @@ export const ru: Dictionary = {
     eyebrow: "ТЕХНОЛОГИИ",
     title: "Современные инструменты, чистая реализация.",
     description:
-      "Интерактивный обзор технологий, которые я использую для создания масштабируемых production-ready веб-приложений.",
+      "Технологии, которые я использую для создания масштабируемых production-ready веб-приложений.",
     tabs: {
       frontend: "Frontend",
       backend: "Backend",
@@ -113,6 +115,7 @@ export const ru: Dictionary = {
     items: [
       {
         company: "ATG Hospitality",
+        org: "Anex Tour",
         role: "Junior Software Developer",
         location: "Анталья, Турция",
         start: "Май 2025",
@@ -126,6 +129,7 @@ export const ru: Dictionary = {
       },
       {
         company: "ATG Hospitality",
+        org: "Anex Tour",
         role: "Software Developer Intern",
         location: "Анталья, Турция",
         start: "Фев 2025",
@@ -158,9 +162,15 @@ export const ru: Dictionary = {
   },
   projects: {
     eyebrow: "ИЗБРАННЫЕ ПРОЕКТЫ",
-    title: "Визуально сильные. Технически обоснованные.",
+    title: "Приложения, которые я создаю.",
     description:
-      "Premium-сетка с отточенными микроинтеракциями и быстрым предпросмотром проектов.",
+      "Проекты на C#/.NET и React. Технологии, архитектурные решения и исходный код каждого приложения.",
+    viewDetails: "Подробнее",
+    backToProjects: "Все проекты",
+    highlights: "Ключевое",
+    results: "Результаты",
+    techStack: "Стек",
+    sourceCode: "Исходный код",
     items: [
       {
         slug: "fitlog",
@@ -193,15 +203,12 @@ export const ru: Dictionary = {
     ],
   },
   caseStudies: {
-    eyebrow: "КЕЙСЫ",
-    title: "Как я подхожу к сложным продуктовым задачам.",
-    description:
-      "Избранные разборы архитектурных решений, enterprise-ограничений и измеримых результатов, за пределами обычного списка проектов.",
     problem: "ПРОБЛЕМА",
     solution: "РЕШЕНИЕ",
     items: [
       {
         slug: "fitlog-clean-architecture",
+        project: "fitlog",
         title: "FitLog: Поддерживаемая фитнес-платформа на Clean Architecture",
         problem:
           "Большинство фитнес-приложений начинаются с нескольких экранов и растут органично. Со временем логика тренировок оказывается в UI-компонентах, SQL-запросы просачиваются в контроллеры, и каждая новая функция выходит сложнее. Эта цена редко заметна в первый день, она накапливается по мере роста продукта, замедления онбординга и увеличения регрессий.",
@@ -216,40 +223,40 @@ export const ru: Dictionary = {
         ],
       },
       {
-        slug: "enterprise-hospitality",
-        title: "Full stack разработка корпоративных ERP-систем",
+        slug: "enterprise-operations-platform-case",
+        project: "enterprise-operations-platform",
+        title: "Enterprise Operations Platform: единая мультиарендная платформа для встреч, решений и процессов",
         problem:
-          "Корпоративные ERP-системы, через которые тысячи пользователей ведут ежедневную работу, состоят из взаимозависимых модулей: бронирование, бухгалтерия, операции. В live-среде один дефект может остановить рабочий процесс сотен пользователей. Поэтому новые функции нужно добавлять, не ломая существующие, сохраняя целостность данных и производительность.",
+          "Организации часто ведут встречи, решения, задачи и документы в разных инструментах. Поручения со встреч теряются по пути в трекер задач, у решений нет истории согласования, и никто не видит операционную картину целиком. Платформа, которая объединяет всё это, должна обслуживать много организаций одновременно (multi-tenant), изолировать данные каждой, применять детальные права доступа и вести аудит, и при этом кодовая база не должна разваливаться по мере роста числа модулей.",
         solution:
-          "Я работаю над backend и frontend live ERP-систем с 1,000+ активных пользователей. Backend разрабатываю на C#, .NET, ASP.NET Core и Entity Framework Core, frontend — на React, JavaScript, HTML, CSS и Bootstrap. Разрабатываю и улучшаю RESTful API, налаживаю интеграцию frontend-backend и настраиваю локальные среды разработки с Docker, PostgreSQL и Microsoft SQL Server, участвуя в моделировании данных и оптимизации запросов.",
-        technologies: ["C#", ".NET", "ASP.NET Core", "React", "PostgreSQL", "SQL Server"],
+          "Я построил EOP на Clean Architecture из четырёх слоёв (Api, Application, Domain и Infrastructure) плюс общие building blocks. Каждый use case — это CQRS-команда или запрос через MediatR; логирование, валидация (FluentValidation) и обработка ошибок вынесены в pipeline behaviors в одном месте. Мультиарендность обеспечивается tenant-context middleware и query filters в EF Core; авторизация на основе прав работает в API и отражается в интерфейсе на Next.js/React. Данные хранятся в PostgreSQL, кэш — в Redis, уведомления в реальном времени идут через SignalR, фоновые задачи выполняет Hangfire, а Microsoft Graph связывает Teams, Outlook, SharePoint и OneDrive.",
+        technologies: ["ASP.NET Core", "PostgreSQL", "Redis", "SignalR", "Hangfire", "Next.js", "React", "TypeScript"],
         results: [
-          "Разработка функций и исправление ошибок в модулях бронирования, бухгалтерии и операций",
-          "Вклад в поддержку и развитие live ERP-систем с 1,000+ активных пользователей",
-          "Практический опыт разработки RESTful API и интеграции frontend-backend",
-          "Моделирование данных и оптимизация запросов в средах Docker с PostgreSQL и SQL Server",
+          "11 модулей (встречи, решения, задачи, документы, процессы, уведомления, аналитика, поиск, Microsoft 365, фоновые задачи и администрирование) на одном API с общей идентификацией и правами",
+          "Сквозные задачи (логирование, валидация, обработка ошибок) решаются один раз в pipeline MediatR, а не в каждом эндпоинте",
+          "Данные арендаторов изолированы через middleware и query filters; права проверяются в API и отражаются в UI",
+          "Покрыто тестами xUnit и Playwright, упаковано в Docker Compose, сборка в GitHub Actions",
         ],
       },
     ],
   },
   github: {
     eyebrow: "GITHUB",
-    title: "Живая статистика с устойчивыми состояниями.",
-    description: "Интеграция GitHub API с загрузкой, обработкой ошибок и чистым маппингом данных.",
+    title: "Мои open-source проекты.",
+    description: "Публичные репозитории из моего профиля GitHub, напрямую из GitHub API.",
     repositories: "РЕПОЗИТОРИИ",
     stars: "ЗВЁЗДЫ",
-    followers: "ПОДПИСЧИКИ",
-    following: "ПОДПИСКИ",
-    topLanguages: "ОСНОВНЫЕ ЯЗЫКИ",
+    updated: "Обновлено",
+    viewProfile: "Профиль на GitHub",
+    noDescription: "Без описания",
     errorTitle: "Данные GitHub недоступны",
-    errorHint: "Вы можете задать GITHUB_USERNAME в переменных окружения.",
-    languages: ["C#", ".NET", "React"],
+    errorHint: "Репозитории можно посмотреть прямо на GitHub.",
   },
   contact: {
     eyebrow: "КОНТАКТЫ",
-    title: "Premium-контакт: просто и понятно.",
+    title: "Давайте работать вместе.",
     description:
-      "Отправьте сообщение или свяжитесь через соцсети. С корректными состояниями и доступными взаимодействиями.",
+      "Напишите мне о вакансиях разработчика и командных возможностях через форму или по email.",
     name: "Имя",
     namePlaceholder: "Ваше имя",
     email: "Эл. почта",

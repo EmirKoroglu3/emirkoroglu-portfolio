@@ -11,6 +11,7 @@ import { GitHubIcon } from "@/components/icons/GitHubIcon";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { localePath, sectionHref } from "@/lib/i18n";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import type { NavId } from "@/lib/i18n/types";
 import { cn } from "@/lib/cn";
@@ -19,7 +20,6 @@ const navIds: NavId[] = [
   "about",
   "projects",
   "experience",
-  "case-studies",
   "stack",
   "certifications",
   "github",
@@ -53,7 +53,7 @@ function useActiveSection(ids: readonly string[]) {
 }
 
 export function Navbar() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [open, setOpen] = useState(false);
   const ids = useMemo(() => navIds, []);
   const active = useActiveSection(ids);
@@ -72,8 +72,8 @@ export function Navbar() {
       <Container className="pointer-events-auto">
         <div className="panel mt-4 rounded-2xl">
           <div className="flex flex-nowrap items-center justify-between gap-3 px-4 py-3 md:gap-4 md:px-5">
-            <a href="#top" className="group flex min-w-0 shrink items-center gap-2">
-              <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center font-mono text-sm text-[hsl(var(--accent))]">ek<span className="text-faint">/</span></span>
+            <a href={localePath(locale)} className="group flex min-w-0 shrink items-center gap-2">
+              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center font-mono md:h-9 md:w-9 text-sm text-[hsl(var(--accent))]">ek<span className="text-faint">/</span></span>
               <div className="hidden min-w-0 leading-tight sm:block lg:hidden 2xl:block">
                 <div className="truncate text-sm font-semibold tracking-tightish text-foreground">
                   {t.profile.name}
@@ -88,7 +88,7 @@ export function Navbar() {
                 .map((id) => (
                   <a
                     key={id}
-                    href={`#${id}`}
+                    href={sectionHref(locale, id)}
                     className={cn(
                       "shrink-0 whitespace-nowrap rounded-xl px-2.5 py-2 text-xs text-muted transition-colors hover:bg-glass-subtle hover:text-foreground xl:px-3 xl:text-sm",
                       id === "github" && "inline-flex items-center justify-center px-2.5",
@@ -110,7 +110,7 @@ export function Navbar() {
             <div className="hidden shrink-0 flex-nowrap items-center gap-1.5 md:flex md:gap-2">
               <LanguageSwitcher />
               <ThemeToggle />
-              <Button href="#contact" variant="primary" size="sm">
+              <Button href={sectionHref(locale, "contact")} variant="primary" size="sm">
                 {t.common.contact}
               </Button>
             </div>
@@ -119,7 +119,7 @@ export function Navbar() {
               <LanguageSwitcher />
               <ThemeToggle />
               <button
-                className="inline-flex h-10 w-10 items-center justify-center rounded-xl border-glass bg-glass-subtle text-foreground"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-xl border-glass bg-glass-subtle text-foreground"
                 onClick={() => setOpen((v) => !v)}
                 aria-label={open ? t.common.closeMenu : t.common.openMenu}
                 aria-expanded={open}
@@ -147,9 +147,9 @@ export function Navbar() {
                 {navIds.map((id) => (
                   <a
                     key={id}
-                    href={`#${id}`}
+                    href={sectionHref(locale, id)}
                     className={cn(
-                      "rounded-xl px-3 py-2.5 text-sm text-muted hover:bg-glass-subtle hover:text-foreground",
+                      "rounded-xl px-3 py-3 text-sm text-muted hover:bg-glass-subtle hover:text-foreground",
                       active === id && "bg-glass-subtle text-foreground",
                     )}
                     onClick={() => setOpen(false)}
@@ -160,7 +160,7 @@ export function Navbar() {
               </div>
               <div className="mt-3 grid gap-2">
                 <CvButtons size="md" className="grid grid-cols-2" />
-                <Button href="#contact" variant="primary" size="md" onClick={() => setOpen(false)}>
+                <Button href={sectionHref(locale, "contact")} variant="primary" size="md" onClick={() => setOpen(false)}>
                   {t.common.contact}
                 </Button>
               </div>

@@ -30,7 +30,7 @@ export function ThemeToggle({ className }: { className?: string }) {
     <button
       type="button"
       className={cn(
-        "inline-flex h-9 w-9 items-center justify-center rounded-xl border-glass bg-glass-subtle text-muted transition-colors hover:bg-glass-hover hover:text-foreground",
+        "inline-flex h-11 w-11 items-center md:h-9 md:w-9 justify-center rounded-xl border-glass bg-glass-subtle text-muted transition-colors hover:bg-glass-hover hover:text-foreground",
         className,
       )}
       onClick={toggleTheme}

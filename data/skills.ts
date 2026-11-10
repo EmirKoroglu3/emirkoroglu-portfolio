@@ -1,40 +1,55 @@
 import {
-  Boxes,
-  Braces,
-  Database,
-  GitBranch,
-  FolderGit2,
-  LayoutGrid,
-  Server,
-  Wrench,
-} from "lucide-react";
+  siDocker,
+  siDotnet,
+  siFlask,
+  siGit,
+  siGithub,
+  siHtml5,
+  siJavascript,
+  siMysql,
+  siNextdotjs,
+  siNodedotjs,
+  siPostgresql,
+  siPostman,
+  siPython,
+  siReact,
+  siTailwindcss,
+  siTypescript,
+  type SimpleIcon,
+} from "simple-icons";
+
+/**
+ * `icon` is a simple-icons brand mark. C#, SQL Server and REST have no brand
+ * icon there, so they render a generic glyph (`fallback`).
+ */
+export type Skill = { name: string; icon?: SimpleIcon; fallback?: "code" | "database" | "api" };
 
 export const skills = {
   frontend: [
-    { name: "React", icon: LayoutGrid },
-    { name: "Next.js", icon: Boxes },
-    { name: "TypeScript", icon: Braces },
-    { name: "JavaScript", icon: Braces },
-    { name: "Tailwind CSS", icon: LayoutGrid },
-    { name: "HTML & CSS", icon: LayoutGrid },
+    { name: "React", icon: siReact },
+    { name: "Next.js", icon: siNextdotjs },
+    { name: "TypeScript", icon: siTypescript },
+    { name: "JavaScript", icon: siJavascript },
+    { name: "Tailwind CSS", icon: siTailwindcss },
+    { name: "HTML & CSS", icon: siHtml5 },
   ],
   backend: [
-    { name: "C#", icon: Braces },
-    { name: ".NET", icon: Server },
-    { name: "Node.js", icon: Server },
-    { name: "Python", icon: Server },
-    { name: "Flask", icon: Server },
-    { name: "REST APIs", icon: Server },
+    { name: "C#", fallback: "code" },
+    { name: ".NET", icon: siDotnet },
+    { name: "Node.js", icon: siNodedotjs },
+    { name: "Python", icon: siPython },
+    { name: "Flask", icon: siFlask },
+    { name: "REST APIs", fallback: "api" },
   ],
   database: [
-    { name: "SQL Server", icon: Database },
-    { name: "MySQL", icon: Database },
-    { name: "PostgreSQL", icon: Database },
+    { name: "SQL Server", fallback: "database" },
+    { name: "MySQL", icon: siMysql },
+    { name: "PostgreSQL", icon: siPostgresql },
   ],
   tools: [
-    { name: "Git", icon: GitBranch },
-    { name: "GitHub", icon: FolderGit2 },
-    { name: "Docker", icon: Wrench },
-    { name: "Postman", icon: Wrench },
+    { name: "Git", icon: siGit },
+    { name: "GitHub", icon: siGithub },
+    { name: "Docker", icon: siDocker },
+    { name: "Postman", icon: siPostman },
   ],
-} as const;
+} satisfies Record<string, Skill[]>;

@@ -5,16 +5,10 @@ import type { Locale } from "@/lib/i18n";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import { ThemeProvider } from "@/lib/theme/ThemeProvider";
 
-export function AppProviders({
-  children,
-  initialLocale,
-}: {
-  children: React.ReactNode;
-  initialLocale: Locale;
-}) {
+export function AppProviders({ children, locale }: { children: React.ReactNode; locale: Locale }) {
   return (
     <ThemeProvider>
-      <I18nProvider initialLocale={initialLocale}>{children}</I18nProvider>
+      <I18nProvider locale={locale}>{children}</I18nProvider>
     </ThemeProvider>
   );
 }

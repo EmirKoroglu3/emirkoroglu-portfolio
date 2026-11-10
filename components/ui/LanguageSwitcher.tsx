@@ -32,7 +32,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
     <div ref={ref} className={cn("relative", className)}>
       <button
         type="button"
-        className="inline-flex h-9 items-center gap-1.5 rounded-xl border-glass bg-glass-subtle px-2.5 text-sm text-muted transition-colors hover:bg-glass-hover hover:text-foreground"
+        className="inline-flex h-11 items-center gap-1.5 md:h-9 rounded-xl border-glass bg-glass-subtle px-2.5 text-sm text-muted transition-colors hover:bg-glass-hover hover:text-foreground"
         onClick={() => setOpen((v) => !v)}
         aria-label={t.common.language}
         aria-expanded={open}
@@ -56,7 +56,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
               role="option"
               aria-selected={locale === loc}
               className={cn(
-                "flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm transition-colors",
+                "flex min-h-11 w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm transition-colors",
                 locale === loc
                   ? "bg-glass-strong text-foreground"
                   : "text-muted hover:bg-glass-hover hover:text-foreground",

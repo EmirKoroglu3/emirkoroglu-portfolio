@@ -39,6 +39,9 @@ export const en: Dictionary = {
     themeLight: "Light mode",
     themeDark: "Dark mode",
     language: "Language",
+    notFoundTitle: "Page not found",
+    notFoundText: "The page you're looking for doesn't exist or has moved.",
+    backHome: "Back to home",
   },
   nav: {
     about: "About",
@@ -46,7 +49,6 @@ export const en: Dictionary = {
     experience: "Experience",
     certifications: "Certifications",
     projects: "Projects",
-    "case-studies": "Case Studies",
     github: "GitHub",
     contact: "Contact",
   },
@@ -96,7 +98,7 @@ export const en: Dictionary = {
     eyebrow: "TECH STACK",
     title: "Modern tooling, clean execution.",
     description:
-      "An interactive snapshot of the technologies I use to ship scalable, production-ready web applications.",
+      "The technologies I use to ship scalable, production-ready web applications.",
     tabs: {
       frontend: "Frontend",
       backend: "Backend",
@@ -113,6 +115,7 @@ export const en: Dictionary = {
     items: [
       {
         company: "ATG Hospitality",
+        org: "Anex Tour",
         role: "Junior Software Developer",
         location: "Antalya, Turkey",
         start: "May 2025",
@@ -126,6 +129,7 @@ export const en: Dictionary = {
       },
       {
         company: "ATG Hospitality",
+        org: "Anex Tour",
         role: "Software Developer Intern",
         location: "Antalya, Turkey",
         start: "Feb 2025",
@@ -161,6 +165,12 @@ export const en: Dictionary = {
     title: "Applications I build.",
     description:
       "Projects built with C#/.NET and React. Explore the technologies, architecture decisions, and source code behind each application.",
+    viewDetails: "View details",
+    backToProjects: "All projects",
+    highlights: "Highlights",
+    results: "Results",
+    techStack: "Tech stack",
+    sourceCode: "Source code",
     items: [
       {
         slug: "fitlog",
@@ -193,15 +203,12 @@ export const en: Dictionary = {
     ],
   },
   caseStudies: {
-    eyebrow: "CASE STUDIES",
-    title: "How I approach complex product problems.",
-    description:
-      "Selected deep-dives into architecture decisions, enterprise constraints, and measurable outcomes, beyond a simple project list.",
     problem: "PROBLEM",
     solution: "SOLUTION",
     items: [
       {
         slug: "fitlog-clean-architecture",
+        project: "fitlog",
         title: "FitLog: A maintainable fitness platform built with Clean Architecture",
         problem:
           "Most fitness apps start with a few screens and grow organically. Over time, workout logic ends up inside UI components, database queries leak into controllers, and every new feature becomes harder to ship. The cost is rarely visible on day one, it compounds as the product scales, onboarding slows down, and regressions multiply.",
@@ -216,18 +223,19 @@ export const en: Dictionary = {
         ],
       },
       {
-        slug: "enterprise-hospitality",
-        title: "Full stack development on enterprise ERP systems",
+        slug: "enterprise-operations-platform-case",
+        project: "enterprise-operations-platform",
+        title: "Enterprise Operations Platform: one multi-tenant platform for meetings, decisions and workflows",
         problem:
-          "Enterprise ERP systems that power thousands of users' daily work are made of interdependent modules like reservations, accounting, and operations. In a live environment, a single defect can halt the workflow of hundreds of users. New features therefore have to be added without breaking existing functionality, while preserving data integrity and performance.",
+          "Organizations often run meetings, decisions, tasks and documents in separate tools. Action items from a meeting get lost on the way to the task tracker, decisions lack an approval trail, and nobody has a single view of operations. A platform that brings these together has to serve many organizations at once (multi-tenant), keep each tenant's data isolated, enforce fine-grained permissions and leave an audit trail, without the codebase falling apart as modules multiply.",
         solution:
-          "I work on both the backend and frontend of live ERP systems serving 1,000+ active users. I build the backend with C#, .NET, ASP.NET Core, and Entity Framework Core, and the frontend with React, JavaScript, HTML, CSS, and Bootstrap. I develop and improve RESTful APIs, wire up frontend-backend integration, and set up local development environments with Docker, PostgreSQL, and Microsoft SQL Server, contributing to data modeling and query optimization.",
-        technologies: ["C#", ".NET", "ASP.NET Core", "React", "PostgreSQL", "SQL Server"],
+          "I built EOP on Clean Architecture with four layers (Api, Application, Domain and Infrastructure) plus shared building blocks. Every use case is a CQRS command or query dispatched through MediatR, with pipeline behaviors handling logging, validation (FluentValidation) and error handling in one place. Multi-tenancy is enforced by tenant-context middleware and EF Core query filters; permission-based authorization lives in the API and is mirrored in the Next.js/React UI. PostgreSQL stores the data, Redis handles caching, SignalR delivers real-time notifications, Hangfire runs background jobs, and Microsoft Graph connects Teams, Outlook, SharePoint and OneDrive.",
+        technologies: ["ASP.NET Core", "PostgreSQL", "Redis", "SignalR", "Hangfire", "Next.js", "React", "TypeScript"],
         results: [
-          "Feature development and bug fixing across reservation, accounting, and operations modules",
-          "Contributions to maintenance and enhancement of live ERP systems serving 1,000+ active users",
-          "Hands-on experience with RESTful API development and frontend-backend integration",
-          "Data modeling and query optimization on Docker-based PostgreSQL and SQL Server environments",
+          "11 modules (meetings, decisions, tasks, documents, workflows, notifications, analytics, search, Microsoft 365, background jobs and administration) on one API with shared identity and permissions",
+          "Cross-cutting concerns (logging, validation, error handling) handled once in the MediatR pipeline instead of in every endpoint",
+          "Tenant data isolated by middleware and query filters; permissions enforced in the API and reflected in the UI",
+          "Covered by xUnit and Playwright tests, packaged with Docker Compose and built with GitHub Actions",
         ],
       },
     ],
@@ -235,16 +243,14 @@ export const en: Dictionary = {
   github: {
     eyebrow: "GITHUB",
     title: "My open source work.",
-    description:
-      "Repositories and up-to-date statistics from my GitHub profile.",
+    description: "Public repositories from my GitHub profile, pulled live from the GitHub API.",
     repositories: "REPOSITORIES",
     stars: "STARS",
-    followers: "FOLLOWERS",
-    following: "FOLLOWING",
-    topLanguages: "TOP LANGUAGES",
+    updated: "Updated",
+    viewProfile: "View GitHub profile",
+    noDescription: "No description",
     errorTitle: "GitHub data unavailable",
-    errorHint: "You can set GITHUB_USERNAME in your environment.",
-    languages: ["C#", ".NET", "React"],
+    errorHint: "You can browse my repositories directly on GitHub.",
   },
   contact: {
     eyebrow: "CONTACT",

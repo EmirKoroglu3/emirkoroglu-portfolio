@@ -39,6 +39,9 @@ export const de: Dictionary = {
     themeLight: "Helles Design",
     themeDark: "Dunkles Design",
     language: "Sprache",
+    notFoundTitle: "Seite nicht gefunden",
+    notFoundText: "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    backHome: "Zur Startseite",
   },
   nav: {
     about: "Über mich",
@@ -46,7 +49,6 @@ export const de: Dictionary = {
     experience: "Erfahrung",
     certifications: "Zertifikate",
     projects: "Projekte",
-    "case-studies": "Fallstudien",
     github: "GitHub",
     contact: "Kontakt",
   },
@@ -76,9 +78,9 @@ export const de: Dictionary = {
       "Absolvent der Akdeniz Universität (Wirtschaftsinformatik, 2025). Mir sind Clean Architecture, sichere Programmierung und Software wichtig, die echte Geschäftsprobleme löst.",
     highlights: [
       "Saubere Komponentenarchitektur",
-      "Premium-Mikrointeraktionen",
-      "Standardmäßig responsiv",
-      "Fokus auf SEO und Performance",
+      "Backend- und Frontend-Integration",
+      "Sichere Programmierung",
+      "Wartbare Software",
     ],
     stats: [
       { label: "Erfahrung", value: "2+ Jahre" },
@@ -96,7 +98,7 @@ export const de: Dictionary = {
     eyebrow: "TECH-STACK",
     title: "Moderne Tools, saubere Umsetzung.",
     description:
-      "Ein interaktiver Überblick über die Technologien, mit denen ich skalierbare, produktionsreife Webanwendungen entwickle.",
+      "Die Technologien, mit denen ich skalierbare, produktionsreife Webanwendungen entwickle.",
     tabs: {
       frontend: "Frontend",
       backend: "Backend",
@@ -113,6 +115,7 @@ export const de: Dictionary = {
     items: [
       {
         company: "ATG Hospitality",
+        org: "Anex Tour",
         role: "Junior Software Developer",
         location: "Antalya, Türkei",
         start: "Mai 2025",
@@ -126,6 +129,7 @@ export const de: Dictionary = {
       },
       {
         company: "ATG Hospitality",
+        org: "Anex Tour",
         role: "Software Developer Intern",
         location: "Antalya, Türkei",
         start: "Feb. 2025",
@@ -158,9 +162,15 @@ export const de: Dictionary = {
   },
   projects: {
     eyebrow: "AUSGEWÄHLTE PROJEKTE",
-    title: "Visuell stark. Technisch fundiert.",
+    title: "Anwendungen, die ich entwickle.",
     description:
-      "Ein Premium-Grid mit verfeinerten Mikrointeraktionen und schneller Projekt-Vorschau.",
+      "Projekte mit C#/.NET und React. Entdecken Sie die Technologien, Architekturentscheidungen und den Quellcode hinter jeder Anwendung.",
+    viewDetails: "Details ansehen",
+    backToProjects: "Alle Projekte",
+    highlights: "Highlights",
+    results: "Ergebnisse",
+    techStack: "Tech-Stack",
+    sourceCode: "Quellcode",
     items: [
       {
         slug: "fitlog",
@@ -193,15 +203,12 @@ export const de: Dictionary = {
     ],
   },
   caseStudies: {
-    eyebrow: "FALLSTUDIEN",
-    title: "Wie ich komplexe Produktprobleme angehe.",
-    description:
-      "Ausgewählte Deep-Dives zu Architekturentscheidungen, Enterprise-Anforderungen und messbaren Ergebnissen, jenseits einer einfachen Projektliste.",
     problem: "PROBLEM",
     solution: "LÖSUNG",
     items: [
       {
         slug: "fitlog-clean-architecture",
+        project: "fitlog",
         title: "FitLog: Eine wartbare Fitness-Plattform mit Clean Architecture",
         problem:
           "Die meisten Fitness-Apps starten mit wenigen Screens und wachsen organisch. Mit der Zeit landet Workout-Logik in UI-Komponenten, Datenbankabfragen sickern in Controller, und jedes neue Feature wird schwerer auszuliefern. Diese Kosten sind am ersten Tag selten sichtbar, sie steigen, wenn das Produkt skaliert, Onboarding langsamer wird und Regressionen zunehmen.",
@@ -216,40 +223,40 @@ export const de: Dictionary = {
         ],
       },
       {
-        slug: "enterprise-hospitality",
-        title: "Full-Stack-Entwicklung an Enterprise-ERP-Systemen",
+        slug: "enterprise-operations-platform-case",
+        project: "enterprise-operations-platform",
+        title: "Enterprise Operations Platform: eine mandantenfähige Plattform für Meetings, Entscheidungen und Workflows",
         problem:
-          "Enterprise-ERP-Systeme, über die Tausende Nutzer ihre tägliche Arbeit abwickeln, bestehen aus voneinander abhängigen Modulen wie Reservierung, Buchhaltung und Betrieb. In einer Live-Umgebung kann ein einziger Fehler den Arbeitsablauf von Hunderten Nutzern lahmlegen. Neue Features müssen daher ohne Beeinträchtigung bestehender Funktionen ergänzt werden, unter Wahrung von Datenintegrität und Performance.",
+          "Organisationen verwalten Meetings, Entscheidungen, Aufgaben und Dokumente oft in getrennten Tools. Aktionspunkte aus Meetings gehen auf dem Weg in die Aufgabenverwaltung verloren, Entscheidungen haben keine nachvollziehbare Freigabe, und niemand hat einen Gesamtblick auf den Betrieb. Eine Plattform, die all das zusammenführt, muss viele Organisationen gleichzeitig bedienen (Multi-Tenant), die Daten jedes Mandanten isolieren, feingranulare Berechtigungen durchsetzen und einen Audit-Trail führen, ohne dass die Codebasis mit jedem neuen Modul auseinanderfällt.",
         solution:
-          "Ich arbeite am Backend und Frontend von Live-ERP-Systemen mit über 1.000 aktiven Nutzern. Das Backend entwickle ich mit C#, .NET, ASP.NET Core und Entity Framework Core, das Frontend mit React, JavaScript, HTML, CSS und Bootstrap. Ich entwickle und verbessere RESTful APIs, verbinde Frontend und Backend und richte lokale Entwicklungsumgebungen mit Docker, PostgreSQL und Microsoft SQL Server ein, mit Beiträgen zu Datenmodellierung und Query-Optimierung.",
-        technologies: ["C#", ".NET", "ASP.NET Core", "React", "PostgreSQL", "SQL Server"],
+          "Ich habe EOP auf Clean Architecture mit vier Schichten aufgebaut (Api, Application, Domain und Infrastructure) plus gemeinsamen Building Blocks. Jeder Use Case ist ein CQRS-Command oder eine Query über MediatR; Pipeline-Behaviors übernehmen Logging, Validierung (FluentValidation) und Fehlerbehandlung an einer zentralen Stelle. Mandantenfähigkeit wird über Tenant-Context-Middleware und EF-Core-Query-Filter durchgesetzt; berechtigungsbasierte Autorisierung greift in der API und spiegelt sich in der Next.js/React-Oberfläche wider. PostgreSQL speichert die Daten, Redis übernimmt das Caching, SignalR liefert Echtzeit-Benachrichtigungen, Hangfire führt Hintergrundjobs aus, und Microsoft Graph bindet Teams, Outlook, SharePoint und OneDrive an.",
+        technologies: ["ASP.NET Core", "PostgreSQL", "Redis", "SignalR", "Hangfire", "Next.js", "React", "TypeScript"],
         results: [
-          "Feature-Entwicklung und Fehlerbehebung in Reservierungs-, Buchhaltungs- und Betriebsmodulen",
-          "Beiträge zu Wartung und Weiterentwicklung von Live-ERP-Systemen mit über 1.000 aktiven Nutzern",
-          "Praktische Erfahrung mit RESTful-API-Entwicklung und Frontend-Backend-Integration",
-          "Datenmodellierung und Query-Optimierung in Docker-basierten PostgreSQL- und SQL-Server-Umgebungen",
+          "11 Module (Meetings, Entscheidungen, Aufgaben, Dokumente, Workflows, Benachrichtigungen, Analytics, Suche, Microsoft 365, Hintergrundjobs und Administration) auf einer API mit gemeinsamer Identität und Berechtigungen",
+          "Querschnittsthemen (Logging, Validierung, Fehlerbehandlung) einmal in der MediatR-Pipeline statt in jedem Endpoint",
+          "Mandantendaten per Middleware und Query-Filtern isoliert; Berechtigungen in der API durchgesetzt und in der UI abgebildet",
+          "Abgedeckt durch xUnit- und Playwright-Tests, paketiert mit Docker Compose, gebaut mit GitHub Actions",
         ],
       },
     ],
   },
   github: {
     eyebrow: "GITHUB",
-    title: "Live-Statistiken mit robusten Zuständen.",
-    description: "GitHub-API-Integration mit Lade-, Fehlerbehandlung und sauberem Daten-Mapping.",
+    title: "Meine Open-Source-Arbeit.",
+    description: "Öffentliche Repositories aus meinem GitHub-Profil, live über die GitHub-API.",
     repositories: "REPOSITORIES",
     stars: "STARS",
-    followers: "FOLLOWER",
-    following: "FOLGT",
-    topLanguages: "TOP-SPRACHEN",
+    updated: "Aktualisiert",
+    viewProfile: "GitHub-Profil ansehen",
+    noDescription: "Keine Beschreibung",
     errorTitle: "GitHub-Daten nicht verfügbar",
-    errorHint: "Sie können GITHUB_USERNAME in Ihrer Umgebung setzen.",
-    languages: ["C#", ".NET", "React"],
+    errorHint: "Sie können meine Repositories direkt auf GitHub ansehen.",
   },
   contact: {
     eyebrow: "KONTAKT",
-    title: "Ein Premium-Kontaktfluss: einfach und klar.",
+    title: "Lassen Sie uns zusammenarbeiten.",
     description:
-      "Senden Sie eine Nachricht oder kontaktieren Sie mich über soziale Links. Mit sauberen Zuständen und barrierefreien Interaktionen.",
+      "Kontaktieren Sie mich zu Softwareentwickler-Positionen und Teammöglichkeiten über das Formular oder per E-Mail.",
     name: "Name",
     namePlaceholder: "Ihr Name",
     email: "E-Mail",
