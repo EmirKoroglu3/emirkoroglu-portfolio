@@ -1,37 +1,46 @@
-PORTFOLIO TRANSFER (ZIP ile taşıma)
+PORTFOLIO TRANSFER (ZIP ile tasima)
 
-Amaç
------
-Projeyi başka bilgisayara taşımak için tek bir zip üretmek.
-İsterseniz .env.local (API key vb.) de zip'e dahil edilebilir.
+Amac
+----
+Projeyi baska bilgisayara tasimak. Zip icinde:
+- Tum kaynak kod (su anki hali)
+- .git (GitHub remote + gecmis; diger PC'den push yapabilirsin)
+- .env.local (API key vb., -IncludeEnvLocal ile)
 
-1) ZIP oluşturma (iş bilgisayarında)
------------------------------------
+node_modules ve .next DAHIL DEGIL (cok buyur). Yeni PC'de npm install ile kurulur.
+
+1) ZIP olusturma (bu PC)
+------------------------
 PowerShell:
 
   cd C:\Users\emir.koroglu\Desktop\portfolio
 
-Env dahil OLMADAN:
-  powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\pack-for-transfer.ps1
-
-Env dahil OLARAK (.env.local):
   powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\pack-for-transfer.ps1 -IncludeEnvLocal
 
-Çıktı: proje kökünde "portfolio-transfer-YYYYMMDD-HHMMSS.zip"
+Cikti: masaustunde veya proje kokunde portfolio-transfer-*.zip
 
-2) ZIP'i OneDrive'a yükle
--------------------------
-Zip dosyasını OneDrive'a koy.
+2) OneDrive'a yukle
+-------------------
+Zip dosyasini OneDrive'a koy, diger PC'den indir.
 
-3) Evdeki PC'de kurulum
------------------------
-1) Zip'i aç (ör. C:\Dev\portfolio)
-2) Proje klasöründe:
+3) Diger PC'de kurulum
+----------------------
+1) Zip'i ac (ornek: C:\Dev\portfolio)
+2) Proje klasorunde:
 
   npm install
   npm run dev
 
+3) Tarayici: http://localhost:3000
+
+Git / Vercel
+------------
+Zip .git icerdigi icin remote ayni kalir:
+
+  git status
+  git push
+
 Notlar
 ------
-- node_modules ve .next zip'e girmez (çok büyür). Ev PC'de npm install ile kurulur.
-- .env.local zip'e dahil ettiysen, bu dosyada gizli anahtarlar var. Paylaşma/başka yere yükleme.
+- .env.local gizli anahtarlar icerir; zip'i herkese acik paylasma.
+- OneDrive senkron bitmeden diger PC'den indirme.

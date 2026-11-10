@@ -47,6 +47,9 @@ Copy-Dir "lib"
 Copy-Dir "public"
 Copy-Dir "sections"
 Copy-Dir "scripts"
+Copy-Dir ".vscode"
+# Git geçmişi + remote (diğer PC'den push/pull devam edebilsin)
+Copy-Dir ".git"
 
 # Proje kök dosyaları
 Copy-File "package.json"
@@ -59,6 +62,7 @@ Copy-File "eslint.config.mjs"
 Copy-File "middleware.ts"
 Copy-File "next-env.d.ts"
 Copy-File ".gitignore"
+Copy-File ".env.example"
 
 if ($IncludeEnvLocal) {
   Copy-File ".env.local"
