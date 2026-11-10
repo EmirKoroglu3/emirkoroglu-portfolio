@@ -74,7 +74,7 @@ export function Navbar() {
           <div className="flex flex-nowrap items-center justify-between gap-3 px-4 py-3 md:gap-4 md:px-5">
             <a href="#top" className="group flex min-w-0 shrink items-center gap-2">
               <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center font-mono text-sm text-[hsl(var(--accent))]">ek<span className="text-faint">/</span></span>
-              <div className="hidden min-w-0 leading-tight sm:block">
+              <div className="hidden min-w-0 leading-tight sm:block lg:hidden 2xl:block">
                 <div className="truncate text-sm font-semibold tracking-tightish text-foreground">
                   {t.profile.name}
                 </div>
@@ -110,7 +110,6 @@ export function Navbar() {
             <div className="hidden shrink-0 flex-nowrap items-center gap-1.5 md:flex md:gap-2">
               <LanguageSwitcher />
               <ThemeToggle />
-              <CvButtons size="sm" className="hidden xl:flex" />
               <Button href="#contact" variant="primary" size="sm">
                 {t.common.contact}
               </Button>

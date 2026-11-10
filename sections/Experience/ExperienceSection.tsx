@@ -26,7 +26,7 @@ export function ExperienceSection() {
           {t.experience.items.map((item, idx) => (
             <Reveal key={`${item.company}-${item.role}`} delay={0.05 + idx * 0.05}>
               <Card className="flex h-full flex-col p-6 md:p-7 hover:border-glass-strong hover:bg-glass-hover">
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-col-reverse items-start gap-3 sm:flex-row sm:justify-between sm:gap-4">
                   <div className="flex min-w-0 items-start gap-3">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border-glass bg-glass-subtle text-muted">
                       <BriefcaseBusiness className="h-5 w-5" />
