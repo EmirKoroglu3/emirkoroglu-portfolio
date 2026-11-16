@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { getDictionary, isLocale, localePath, locales, sectionHref, type Locale } from "@/lib/i18n";
-import { buildPageMetadata } from "@/lib/seo/build-metadata";
+import { buildPageMetadata, jsonLdScript, projectJsonLd } from "@/lib/seo/build-metadata";
 import { Footer } from "@/sections/Footer/Footer";
 
 type Params = Promise<{ locale: string; slug: string }>;
@@ -59,6 +59,13 @@ export default async function ProjectPage({ params }: { params: Params }) {
 
   return (
     <main id="top" className="min-h-dvh">
+      <script
+        type="application/ld+json"
+        // Static, server-built JSON; `<` is escaped so the content can't close the tag.
+        dangerouslySetInnerHTML={{
+          __html: jsonLdScript(projectJsonLd(locale, project, { home: t.profile.name, projects: t.nav.projects })),
+        }}
+      />
       <Navbar />
       <article className="pt-[100px] md:pt-[120px]">
         <Container>

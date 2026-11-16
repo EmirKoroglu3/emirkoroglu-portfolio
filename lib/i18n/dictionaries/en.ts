@@ -4,8 +4,11 @@ export const en: Dictionary = {
   meta: {
     htmlLang: "en",
     localeName: "English",
+    title: "Emir Köroğlu | Full Stack .NET & React Developer (Antalya)",
+    description: "Full stack developer in Antalya, Turkey, building enterprise web applications and ERP systems with C#/.NET, ASP.NET Core, React and Next.js.",
     keywords: [
       "Emir Köroğlu",
+      "Emir Koroglu",
       "Full Stack Developer",
       "React",
       "Next.js",

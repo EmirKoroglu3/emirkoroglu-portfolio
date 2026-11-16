@@ -2,15 +2,18 @@ import type { Metadata } from "next";
 
 import { profile } from "@/data/profile";
 import { skills } from "@/data/skills";
-import { getDictionary, localePath, locales, type Locale } from "@/lib/i18n";
+import { defaultLocale, getDictionary, localePath, locales, type Locale } from "@/lib/i18n";
 
 export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, "");
 
-/** hreflang map for one page: every locale's URL plus x-default (`/`, which redirects by language). */
+/**
+ * hreflang map for one page: every locale's URL plus x-default.
+ * x-default points at the default-locale page itself (200), not at `/`, which only redirects.
+ */
 export function languageAlternates(path = ""): Record<string, string> {
   const languages: Record<string, string> = {};
   for (const l of locales) languages[getDictionary(l).meta.htmlLang] = `${siteUrl}${localePath(l, path)}`;
-  languages["x-default"] = `${siteUrl}${path || "/"}`;
+  languages["x-default"] = `${siteUrl}${localePath(defaultLocale, path)}`;
   return languages;
 }
 
@@ -28,8 +31,8 @@ export function buildPageMetadata({
   description?: string;
 }): Metadata {
   const t = getDictionary(locale);
-  const siteTitle = `${t.profile.name} | ${t.profile.role}`;
-  const desc = description ?? t.profile.tagline;
+  const siteTitle = t.meta.title;
+  const desc = description ?? t.meta.description;
   const url = `${siteUrl}${localePath(locale, path)}`;
   const ogTitle = title ? `${title} | ${t.profile.name}` : siteTitle;
   // Listed explicitly: a nested page's own `openGraph` replaces the parent's, image included.
@@ -59,22 +62,105 @@ export function buildPageMetadata({
   };
 }
 
-/** schema.org Person for the home page, so search engines can show a profile result. */
-export function personJsonLd(locale: Locale) {
+const personId = `${siteUrl}/#person`;
+const websiteId = `${siteUrl}/#website`;
+
+function personNode(locale: Locale) {
   const t = getDictionary(locale);
   return {
-    "@context": "https://schema.org",
     "@type": "Person",
+    "@id": personId,
     name: t.profile.name,
+    alternateName: "Emir Koroglu",
+    givenName: "Emir",
+    familyName: "Köroğlu",
     jobTitle: t.profile.role,
-    description: t.profile.tagline,
+    description: t.meta.description,
     url: `${siteUrl}${localePath(locale)}`,
     image: `${siteUrl}${profile.avatar.src}`,
     sameAs: [profile.links.github, profile.links.linkedin],
     worksFor: { "@type": "Organization", name: "ATG Hospitality" },
-    alumniOf: { "@type": "CollegeOrUniversity", name: profile.education.school },
+    alumniOf: { "@type": "CollegeOrUniversity", name: profile.education.school, sameAs: "https://www.akdeniz.edu.tr" },
     address: { "@type": "PostalAddress", addressLocality: "Antalya", addressCountry: "TR" },
     knowsAbout: Object.values(skills).flatMap((group) => group.map((s) => s.name)),
     knowsLanguage: ["tr", "en"],
   };
+}
+
+function websiteNode() {
+  return {
+    "@type": "WebSite",
+    "@id": websiteId,
+    url: siteUrl,
+    name: "Emir Köroğlu",
+    publisher: { "@id": personId },
+    inLanguage: locales.map((l) => getDictionary(l).meta.htmlLang),
+  };
+}
+
+/** Home page graph: ProfilePage about the Person, inside the WebSite, so search engines can show a profile result. */
+export function homeJsonLd(locale: Locale) {
+  const t = getDictionary(locale);
+  const url = `${siteUrl}${localePath(locale)}`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": `${url}#profilepage`,
+        url,
+        name: t.meta.title,
+        description: t.meta.description,
+        inLanguage: t.meta.htmlLang,
+        isPartOf: { "@id": websiteId },
+        mainEntity: { "@id": personId },
+      },
+      personNode(locale),
+      websiteNode(),
+    ],
+  };
+}
+
+/** Project page graph: breadcrumb plus the project as source code authored by the Person. */
+export function projectJsonLd(
+  locale: Locale,
+  project: { slug: string; title: string; description: string; stack: readonly string[]; github?: string; demo?: string },
+  labels: { home: string; projects: string },
+) {
+  const t = getDictionary(locale);
+  const home = `${siteUrl}${localePath(locale)}`;
+  const url = `${siteUrl}${localePath(locale, `/projects/${project.slug}`)}`;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: labels.home, item: home },
+          { "@type": "ListItem", position: 2, name: labels.projects, item: `${home}#projects` },
+          { "@type": "ListItem", position: 3, name: project.title, item: url },
+        ],
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": `${url}#project`,
+        name: project.title,
+        description: project.description,
+        url,
+        inLanguage: t.meta.htmlLang,
+        keywords: project.stack.join(", "),
+        ...(project.github ? { codeRepository: project.github } : {}),
+        ...(project.demo ? { sameAs: project.demo } : {}),
+        author: { "@id": personId },
+        isPartOf: { "@id": websiteId },
+      },
+      personNode(locale),
+      websiteNode(),
+    ],
+  };
+}
+
+/** Serialize JSON-LD for a <script> tag; `<` is escaped so the content can't close the tag. */
+export function jsonLdScript(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
 }

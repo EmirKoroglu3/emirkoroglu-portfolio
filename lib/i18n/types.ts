@@ -47,7 +47,15 @@ export type CertificationItem = {
 };
 
 export type Dictionary = {
-  meta: { htmlLang: string; localeName: string; keywords: string[] };
+  meta: {
+    htmlLang: string;
+    localeName: string;
+    /** Home page <title> (search result headline), in this language. */
+    title: string;
+    /** Home page meta description, in this language. */
+    description: string;
+    keywords: string[];
+  };
   common: {
     contact: string;
     scroll: string;

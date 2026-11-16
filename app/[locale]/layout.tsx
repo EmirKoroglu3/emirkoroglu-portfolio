@@ -19,10 +19,12 @@ const sans = Inter({
   display: "swap",
 });
 
+// Mono is only for small labels; not preloading it saves ~3 font requests on first load.
 const mono = JetBrains_Mono({
   subsets: ["latin", "latin-ext", "cyrillic"],
   variable: "--font-mono",
   display: "swap",
+  preload: false,
 });
 
 // Only /en, /tr, /de, /ru exist; everything is prerendered at build time.

@@ -24,7 +24,7 @@ export function HeroSection() {
         <div className="studio-hero-grid">
           <div className="studio-intro">
             <Reveal><div className="studio-availability"><span />{t.hero.badge}</div></Reveal>
-            <Reveal delay={0.04}><h1 className="studio-name">Emir<span>Köroğlu<span className="name-period">.</span></span></h1></Reveal>
+            <Reveal delay={0.04}><h1 className="studio-name">Emir{" "}<span>Köroğlu<span className="name-period" aria-hidden="true">.</span></span></h1></Reveal>
             <Reveal delay={0.08}><div className="studio-role"><span className="role-rule" />{t.profile.role}</div><p className="studio-tagline">{t.profile.tagline}</p></Reveal>
             <Reveal delay={0.12}><div className="studio-actions"><Button href="#projects" size="lg">{t.hero.viewProjects}<ArrowUpRight size={17} aria-hidden /></Button><CvButtons size="lg" showIcon /></div></Reveal>
           </div>

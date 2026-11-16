@@ -27,12 +27,17 @@ function SkeletonRow() {
   );
 }
 
-export function GitHubSection() {
+/**
+ * `initialData` is fetched on the server (ISR), so crawlers see the repo list in the HTML.
+ * The browser only calls /api/github when the server fetch failed.
+ */
+export function GitHubSection({ initialData = null }: { initialData?: GitHubStats | null }) {
   const { t } = useI18n();
-  const [data, setData] = useState<GitHubStats | null>(null);
+  const [data, setData] = useState<GitHubStats | null>(initialData);
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
+    if (initialData) return;
     let alive = true;
     (async () => {
       try {
@@ -48,7 +53,7 @@ export function GitHubSection() {
     return () => {
       alive = false;
     };
-  }, []);
+  }, [initialData]);
 
   const formatDate = useMemo(() => {
     const fmt = new Intl.DateTimeFormat(t.meta.htmlLang, { month: "short", year: "numeric" });
