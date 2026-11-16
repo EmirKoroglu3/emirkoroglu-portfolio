@@ -4,7 +4,18 @@ import { profile } from "@/data/profile";
 import { skills } from "@/data/skills";
 import { defaultLocale, getDictionary, localePath, locales, type Locale } from "@/lib/i18n";
 
-export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, "");
+/**
+ * Absolute origin used in canonicals, hreflang, sitemap and JSON-LD.
+ * Falls back to Vercel's production domain before localhost, so a missing
+ * NEXT_PUBLIC_SITE_URL on a deploy can't leak localhost into indexed URLs.
+ */
+function resolveSiteUrl(): string {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  return "http://localhost:3000";
+}
+
+export const siteUrl = resolveSiteUrl().replace(/\/$/, "");
 
 /**
  * hreflang map for one page: every locale's URL plus x-default.

@@ -107,7 +107,7 @@ export function Navbar() {
                 ))}
             </div>
 
-            <div className="hidden shrink-0 flex-nowrap items-center gap-1.5 md:flex md:gap-2">
+            <div className="hidden shrink-0 flex-nowrap items-center gap-1.5 lg:flex md:gap-2">
               <LanguageSwitcher />
               <ThemeToggle />
               <Button href={sectionHref(locale, "contact")} variant="primary" size="sm">
@@ -115,7 +115,7 @@ export function Navbar() {
               </Button>
             </div>
 
-            <div className="flex shrink-0 flex-nowrap items-center gap-1.5 md:hidden">
+            <div className="flex shrink-0 flex-nowrap items-center gap-1.5 lg:hidden">
               <LanguageSwitcher />
               <ThemeToggle />
               <button

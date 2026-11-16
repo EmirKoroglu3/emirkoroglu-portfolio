@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Tailwind 4 reads theme tokens from CSS, not tailwind.config.ts. `inline` resolves
+   var(--ring) per element, so the ring follows the active theme. */
+@theme inline {
+  --color-ring: hsl(var(--ring));
+  --tracking-tightish: -0.02em;
+}
+
 /* ===== Shared tokens ===== */
 :root {
   --radius-xl: 14px;
@@ -102,6 +109,8 @@ body {
   color: hsl(var(--text-3));
 }
 .border-glass {
+  border-width: 1px;
+  border-style: solid;
   border-color: hsl(var(--border) / 0.65);
 }
 .bg-glass {
