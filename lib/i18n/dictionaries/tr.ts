@@ -180,14 +180,15 @@ export const tr: Dictionary = {
         slug: "fitlog",
         title: "FitLog",
         description:
-          "Clean Architecture ile geliştirilmiş bir fitness takip uygulaması, uzun vadeli sürdürülebilirlik ve ölçeklenebilir özellik büyümesi için katmanlar arasında net ayrım.",
-        stack: ["TypeScript", "C#", ".NET", "Clean Architecture", "CSS"],
+          "Antrenman, beslenme, vücut ölçüleri ve hedefleri tek yerde toplayan, canlıda çalışan full-stack fitness uygulaması. ASP.NET Core (.NET 9), React + TypeScript ve PostgreSQL ile Clean Architecture'a göre geliştirildi.",
+        stack: ["ASP.NET Core", "React", "TypeScript", "PostgreSQL", "Docker"],
         github: "https://github.com/EmirKoroglu3/FitLog",
+        demo: "https://www.emirkoroglu.online",
         highlights: [
-          "Net domain sınırlarıyla katmanlı mimari",
-          "C# backend ile eşleştirilmiş TypeScript frontend",
-          "Sürdürülebilirlik ve gelecekteki özellik genişlemesi için tasarlandı",
-          "MIT lisanslı açık kaynak proje",
+          "Seçili programa göre kas gruplarının haftalık set sayısını gösteren kas haritası",
+          "Canlı antrenman modu: set kaydı, dinlenme sayacı ve otomatik ağırlık artışı önerisi",
+          "Barkod okumalı beslenme takibi, 1RM/hacim grafikleri ve OpenAI tabanlı AI Koç",
+          "Docker ile Render, Neon ve Vercel'de yayında; TR/EN destekli, telefona kurulabilen PWA",
         ],
       },
       {
@@ -217,13 +218,13 @@ export const tr: Dictionary = {
         problem:
           "Fitness uygulamaları genellikle birkaç ekranla başlar ve organik olarak büyür. Zamanla antrenman mantığı arayüz bileşenlerinin içine girer, veritabanı sorguları controller katmanına sızar ve her yeni özellik çıkarmak zorlaşır. Bu maliyet ilk gün görünmez, ürün büyüdükçe, ekip büyüdükçe ve regresyonlar arttıkça katlanarak artar.",
         solution:
-          "FitLog'u Clean Architecture ile net sınırlarla yapılandırdım: iş kurallarını yöneten domain katmanı, use case'leri orkestre eden uygulama servisleri, kalıcılık ve dış API'ler için altyapı katmanı ve TypeScript ile yazılmış sunum katmanı. C#/.NET backend kararlı bir API yüzeyi sunarken frontend deneyime odaklanır, böylece her katman sistemin geri kalanını bozmadan bağımsız geliştirilebilir.",
-        technologies: ["TypeScript", "C#", ".NET", "Clean Architecture", "CSS"],
+          "FitLog'u Clean Architecture ile net sınırlarla yapılandırdım: iş kurallarını yöneten domain katmanı, use case'leri yürüten uygulama servisleri, kalıcılık ve dış servisler için altyapı katmanı ve React + TypeScript arayüz. Bu yapı sayesinde kas haritası, ilerleme önerileri, barkod okuma ve AI Koç gibi özellikleri mevcut modülleri bozmadan ekledim. Uygulama Docker ile paketlenip Render (API), Neon (PostgreSQL) ve Vercel (arayüz) üzerinde canlıda çalışıyor.",
+        technologies: ["ASP.NET Core", "EF Core", "PostgreSQL", "React", "TypeScript", "Docker", "OpenAI API"],
         results: [
           "Domain, uygulama, altyapı ve sunum katmanlarında net sorumluluk ayrımı",
-          "Yeni takip özellikleri (öğün, antrenman, ilerleme) mevcut modülleri yeniden yazmadan eklenebilir",
-          "Framework ve arayüzden izole, test edilebilir iş mantığı",
-          "Gerçek bir ürün bağlamında kurumsal düzeyde katmanlı mimari için açık kaynak referans",
+          "Kas haritası, süperset, öğün şablonları ve barkod okuma mevcut modülleri yeniden yazmadan eklendi",
+          "Refresh token'lı JWT, ASP.NET Identity ve rol tabanlı admin paneli",
+          "emirkoroglu.online adresinde canlı; açık kaynak (MIT) ve TR/EN destekli PWA",
         ],
       },
       {

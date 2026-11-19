@@ -57,7 +57,7 @@ Tools: Git, GitHub, Docker, Postman
 
 # Projects
 
-* FitLog: Fitness tracking app with Clean Architecture (TypeScript, C#, .NET)
+* FitLog: Live fitness tracking app (emirkoroglu.online) with Clean Architecture (ASP.NET Core, React, TypeScript, PostgreSQL)
 * Todo Assistant: Python task management assistant
 * Developer Portfolio: Next.js premium portfolio site
 

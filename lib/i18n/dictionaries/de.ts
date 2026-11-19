@@ -179,14 +179,15 @@ export const de: Dictionary = {
         slug: "fitlog",
         title: "FitLog",
         description:
-          "Eine Fitness-Tracking-Anwendung mit Clean Architecture, klare Trennung der Schichten für langfristige Wartbarkeit und skalierbares Feature-Wachstum.",
-        stack: ["TypeScript", "C#", ".NET", "Clean Architecture", "CSS"],
+          "Eine live betriebene Full-Stack-Fitness-App, die Training, Ernährung, Körpermaße und Ziele an einem Ort zusammenführt. Gebaut mit ASP.NET Core (.NET 9), React + TypeScript und PostgreSQL nach Clean Architecture.",
+        stack: ["ASP.NET Core", "React", "TypeScript", "PostgreSQL", "Docker"],
         github: "https://github.com/EmirKoroglu3/FitLog",
+        demo: "https://www.emirkoroglu.online",
         highlights: [
-          "Schichtenarchitektur mit klaren Domain-Grenzen",
-          "TypeScript-Frontend mit C#-Backend",
-          "Für Wartbarkeit und zukünftige Feature-Erweiterung konzipiert",
-          "Open-Source-Projekt mit MIT-Lizenz",
+          "Muskelkarte mit wöchentlichen Sätzen pro Muskelgruppe für das gewählte Programm",
+          "Live-Trainingsmodus mit Satzprotokoll, Pausentimer und automatischen Progressionsvorschlägen",
+          "Ernährungstracking mit Barcode-Scan, 1RM-/Volumen-Diagramme und ein KI-Coach auf OpenAI-Basis",
+          "Mit Docker auf Render, Neon und Vercel deployt; installierbare PWA auf Türkisch und Englisch",
         ],
       },
       {
@@ -216,13 +217,13 @@ export const de: Dictionary = {
         problem:
           "Die meisten Fitness-Apps starten mit wenigen Screens und wachsen organisch. Mit der Zeit landet Workout-Logik in UI-Komponenten, Datenbankabfragen sickern in Controller, und jedes neue Feature wird schwerer auszuliefern. Diese Kosten sind am ersten Tag selten sichtbar, sie steigen, wenn das Produkt skaliert, Onboarding langsamer wird und Regressionen zunehmen.",
         solution:
-          "Ich habe FitLog nach Clean-Architecture-Prinzipien mit klaren Grenzen strukturiert: eine Domain-Schicht für Geschäftsregeln, Anwendungsservices für Use Cases, Infrastruktur für Persistenz und externe APIs sowie eine TypeScript-Präsentationsschicht. Das C#/.NET-Backend bietet eine stabile API-Oberfläche, während das Frontend die Experience optimiert, jede Schicht kann unabhängig weiterentwickelt werden.",
-        technologies: ["TypeScript", "C#", ".NET", "Clean Architecture", "CSS"],
+          "Ich habe FitLog nach Clean-Architecture-Prinzipien mit klaren Grenzen strukturiert: eine Domain-Schicht für Geschäftsregeln, Anwendungsservices für Use Cases, Infrastruktur für Persistenz und externe Dienste sowie ein Frontend mit React + TypeScript. Dadurch konnte ich Muskelkarte, Progressionsvorschläge, Barcode-Scan und KI-Coach hinzufügen, ohne bestehende Module zu brechen. Die App ist mit Docker paketiert und läuft live auf Render (API), Neon (PostgreSQL) und Vercel (Frontend).",
+        technologies: ["ASP.NET Core", "EF Core", "PostgreSQL", "React", "TypeScript", "Docker", "OpenAI API"],
         results: [
           "Klare Verantwortlichkeiten in Domain-, Anwendungs-, Infrastruktur- und Präsentationsschicht",
-          "Neue Tracking-Features (Mahlzeiten, Workouts, Fortschritt) ohne Neuschreiben bestehender Module",
-          "Testbare Geschäftslogik, isoliert von Frameworks und UI-Belangen",
-          "Open-Source-Referenz für Enterprise-Schichtenarchitektur in einem realen Produktkontext",
+          "Muskelkarte, Supersätze, Mahlzeitvorlagen und Barcode-Scan ohne Neuschreiben bestehender Module",
+          "JWT mit Refresh-Tokens, ASP.NET Identity und ein rollenbasiertes Admin-Panel",
+          "Live unter emirkoroglu.online; Open Source (MIT) und PWA auf Türkisch und Englisch",
         ],
       },
       {

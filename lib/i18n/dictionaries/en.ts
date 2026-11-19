@@ -179,14 +179,15 @@ export const en: Dictionary = {
         slug: "fitlog",
         title: "FitLog",
         description:
-          "A fitness tracking application built with Clean Architecture, separating concerns across layers for long-term maintainability and scalable feature growth.",
-        stack: ["TypeScript", "C#", ".NET", "Clean Architecture", "CSS"],
+          "A live full-stack fitness app that brings workouts, nutrition, body measurements, and goals together in one place. Built with ASP.NET Core (.NET 9), React + TypeScript, and PostgreSQL following Clean Architecture.",
+        stack: ["ASP.NET Core", "React", "TypeScript", "PostgreSQL", "Docker"],
         github: "https://github.com/EmirKoroglu3/FitLog",
+        demo: "https://www.emirkoroglu.online",
         highlights: [
-          "Layered architecture with clear domain boundaries",
-          "TypeScript frontend paired with C# backend",
-          "Designed for maintainability and future feature expansion",
-          "MIT licensed open-source project",
+          "Muscle map showing weekly sets per muscle group for the selected program",
+          "Live workout mode with set logging, rest timer, and automatic progressive-overload suggestions",
+          "Barcode-based nutrition logging, 1RM/volume charts, and an OpenAI-powered AI Coach",
+          "Deployed with Docker on Render, Neon, and Vercel; installable PWA with Turkish/English support",
         ],
       },
       {
@@ -216,13 +217,13 @@ export const en: Dictionary = {
         problem:
           "Most fitness apps start with a few screens and grow organically. Over time, workout logic ends up inside UI components, database queries leak into controllers, and every new feature becomes harder to ship. The cost is rarely visible on day one, it compounds as the product scales, onboarding slows down, and regressions multiply.",
         solution:
-          "I structured FitLog around Clean Architecture with explicit boundaries: a domain layer that owns business rules, application services that orchestrate use cases, infrastructure for persistence and external APIs, and a TypeScript presentation layer. The C#/.NET backend exposes a stable API surface while the frontend focuses on experience, so each layer can evolve independently without breaking the whole system.",
-        technologies: ["TypeScript", "C#", ".NET", "Clean Architecture", "CSS"],
+          "I structured FitLog around Clean Architecture with explicit boundaries: a domain layer that owns business rules, application services that run use cases, infrastructure for persistence and external services, and a React + TypeScript frontend. That structure let me add a muscle map, progression suggestions, barcode scanning, and an AI Coach without breaking existing modules. The app is packaged with Docker and runs live on Render (API), Neon (PostgreSQL), and Vercel (frontend).",
+        technologies: ["ASP.NET Core", "EF Core", "PostgreSQL", "React", "TypeScript", "Docker", "OpenAI API"],
         results: [
           "Domain, application, infrastructure, and presentation layers with clear ownership",
-          "New tracking features (meals, workouts, progress) without rewriting existing modules",
-          "Testable business logic isolated from frameworks and UI concerns",
-          "Open-source reference for enterprise-grade layering in a real product context",
+          "Muscle map, supersets, meal templates, and barcode scanning added without rewriting existing modules",
+          "JWT with refresh tokens, ASP.NET Identity, and a role-based admin panel",
+          "Live at emirkoroglu.online; open source (MIT) and a Turkish/English PWA",
         ],
       },
       {
