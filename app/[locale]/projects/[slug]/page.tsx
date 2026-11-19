@@ -99,9 +99,9 @@ export default async function ProjectPage({ params }: { params: Params }) {
                   <ArrowUpRight className="h-4 w-4" aria-hidden />
                 </Button>
               ) : null}
-              {project.demo ? (
-                <Button href={project.demo} target="_blank" rel="noreferrer" variant="secondary" size="lg">
-                  {t.common.liveDemo}
+              {project.liveUrl ? (
+                <Button href={project.liveUrl} target="_blank" rel="noreferrer" variant="secondary" size="lg">
+                  {t.common.liveSite}
                   <ArrowUpRight className="h-4 w-4" aria-hidden />
                 </Button>
               ) : null}

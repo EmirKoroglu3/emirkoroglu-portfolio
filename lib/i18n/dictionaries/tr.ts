@@ -33,7 +33,7 @@ export const tr: Dictionary = {
     github: "GitHub",
     linkedin: "LinkedIn",
     email: "E-posta",
-    liveDemo: "Canlı Demo",
+    liveSite: "Canlı Site",
     closeProject: "Projeyi kapat",
     openProject: "Aç",
     cvEn: "CV (EN)",
@@ -183,7 +183,7 @@ export const tr: Dictionary = {
           "Antrenman, beslenme, vücut ölçüleri ve hedefleri tek yerde toplayan, canlıda çalışan full-stack fitness uygulaması. ASP.NET Core (.NET 9), React + TypeScript ve PostgreSQL ile Clean Architecture'a göre geliştirildi.",
         stack: ["ASP.NET Core", "React", "TypeScript", "PostgreSQL", "Docker"],
         github: "https://github.com/EmirKoroglu3/FitLog",
-        demo: "https://www.emirkoroglu.online",
+        liveUrl: "https://www.emirkoroglu.online",
         highlights: [
           "Seçili programa göre kas gruplarının haftalık set sayısını gösteren kas haritası",
           "Canlı antrenman modu: set kaydı, dinlenme sayacı ve otomatik ağırlık artışı önerisi",

@@ -17,7 +17,7 @@ export type ProjectItem = {
   stack: string[];
   highlights: string[];
   github?: string;
-  demo?: string;
+  liveUrl?: string;
 };
 
 export type ExperienceItem = {
@@ -69,7 +69,7 @@ export type Dictionary = {
     github: string;
     linkedin: string;
     email: string;
-    liveDemo: string;
+    liveSite: string;
     closeProject: string;
     openProject: string;
     cvEn: string;

@@ -32,7 +32,7 @@ export const en: Dictionary = {
     github: "GitHub",
     linkedin: "LinkedIn",
     email: "Email",
-    liveDemo: "Live Demo",
+    liveSite: "Live Site",
     closeProject: "Close project",
     openProject: "Open",
     cvEn: "CV (EN)",
@@ -182,7 +182,7 @@ export const en: Dictionary = {
           "A live full-stack fitness app that brings workouts, nutrition, body measurements, and goals together in one place. Built with ASP.NET Core (.NET 9), React + TypeScript, and PostgreSQL following Clean Architecture.",
         stack: ["ASP.NET Core", "React", "TypeScript", "PostgreSQL", "Docker"],
         github: "https://github.com/EmirKoroglu3/FitLog",
-        demo: "https://www.emirkoroglu.online",
+        liveUrl: "https://www.emirkoroglu.online",
         highlights: [
           "Muscle map showing weekly sets per muscle group for the selected program",
           "Live workout mode with set logging, rest timer, and automatic progressive-overload suggestions",

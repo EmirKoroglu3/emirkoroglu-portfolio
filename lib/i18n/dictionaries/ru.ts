@@ -32,7 +32,7 @@ export const ru: Dictionary = {
     github: "GitHub",
     linkedin: "LinkedIn",
     email: "Эл. почта",
-    liveDemo: "Демо",
+    liveSite: "Сайт",
     closeProject: "Закрыть проект",
     openProject: "Открыть",
     cvEn: "CV (EN)",
@@ -182,7 +182,7 @@ export const ru: Dictionary = {
           "Работающее в продакшене full-stack фитнес-приложение, которое объединяет тренировки, питание, замеры тела и цели. Построено на ASP.NET Core (.NET 9), React + TypeScript и PostgreSQL по принципам Clean Architecture.",
         stack: ["ASP.NET Core", "React", "TypeScript", "PostgreSQL", "Docker"],
         github: "https://github.com/EmirKoroglu3/FitLog",
-        demo: "https://www.emirkoroglu.online",
+        liveUrl: "https://www.emirkoroglu.online",
         highlights: [
           "Карта мышц с недельным количеством подходов по группам мышц для выбранной программы",
           "Режим тренировки: запись подходов, таймер отдыха и автоматические подсказки по прогрессии веса",

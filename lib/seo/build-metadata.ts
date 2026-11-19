@@ -135,7 +135,7 @@ export function homeJsonLd(locale: Locale) {
 /** Project page graph: breadcrumb plus the project as source code authored by the Person. */
 export function projectJsonLd(
   locale: Locale,
-  project: { slug: string; title: string; description: string; stack: readonly string[]; github?: string; demo?: string },
+  project: { slug: string; title: string; description: string; stack: readonly string[]; github?: string; liveUrl?: string },
   labels: { home: string; projects: string },
 ) {
   const t = getDictionary(locale);
@@ -161,7 +161,7 @@ export function projectJsonLd(
         inLanguage: t.meta.htmlLang,
         keywords: project.stack.join(", "),
         ...(project.github ? { codeRepository: project.github } : {}),
-        ...(project.demo ? { sameAs: project.demo } : {}),
+        ...(project.liveUrl ? { sameAs: project.liveUrl } : {}),
         author: { "@id": personId },
         isPartOf: { "@id": websiteId },
       },

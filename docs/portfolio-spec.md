@@ -210,7 +210,7 @@ Each project card should contain:
 * Description
 * Technology stack
 * GitHub button
-* Live Demo button
+* Live site button
 
 Advanced Features:
 
